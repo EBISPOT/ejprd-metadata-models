@@ -20,7 +20,8 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
 ![EJP schema blocks](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/ejprdSchemaBlocks.png)
 
 
-
+* The Schema in JSON format [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/docs/metadata_core_schema.txt)  
+    ** Metadata Schema for VP in JSON format [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/docs/_config.yml)
 
 * [ejp-rd/api]() -
 * [JSON2RDF]() -
