@@ -8,17 +8,15 @@ This diagram illustrates the basic idea of the metadata publication workflow. Co
 
 # WORKFLOW FOR EJP-RD METADATA PUBLISHING
 ![schema](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/EJP-RD-Metadata.png)
-
-
 This is the entire codebase for the EJP-RD Metadata publishers. The model is based on and builds on existing standards, such as the [European Rare Disease Registry Infrastructure](https://eu-rd-platform.jrc.ec.europa.eu) and the [Common Data Elements](http://www.erare.eu/sites/default/files/SetCommonData-EU%20RD%20Platform_CDS%20_final.pdf) from the rare disease community and other more generalised standards for data sharing such as the W3C [DCAT vocabulary](https://www.w3.org/TR/vocab-dcat/).
 
 EJP-RD Metadata standard is build around two major standards - [JSON](https://json-schema.org/) and [RDF](https://www.w3.org/RDF/) standard models for data exchange.
 
 The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed below:
 ##  Metadata core schema for VP
-
 ![Metadata vp_model](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/vp_model.gif)
 
+![EJP schema blocks](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/ejprdSchemaBlocks.png)
 
 
 
