@@ -15,7 +15,6 @@ This is the entire codebase for the EJP-RD Metadata publishers. The model is bas
 EJP-RD Metadata standard is build around two major standards - [JSON](https://json-schema.org/) and [RDF](https://www.w3.org/RDF/) standard models for data exchange.
 
 
-
 * [ejp-rd/api]() -
 * [JSON2RDF]() -
 * [RDF-Schema]() -
