@@ -17,7 +17,7 @@ EJP-RD Metadata standard is build around two major standards - [JSON](https://js
 The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed below:
 ##  Metadata core schema for VP
 
-[Metadata vp_model](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/vp_model.gif)
+![Metadata vp_model](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/vp_model.gif)
 
 
 
