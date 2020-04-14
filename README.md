@@ -7,7 +7,6 @@ This is for publishing [European Joint Programme (EJP) for Rare Disease](http://
 This diagram illustrates the basic idea of the metadata publication workflow. Components are independent and can be used and new blocks can be defined that inherit from parent blocks.
 
 # WORKFLOW FOR EJP-RD METADATA PUBLISHING
-<<<<<<< HEAD
 ![schema](https://github.com/ejprd-metadata-model/resource-metadata/shex_schema/EJP_RD_Metadata.png
 =======
 ![schema](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/EJP-RD_Metadata.pdf)
