@@ -17,7 +17,7 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
 ![Metadata vp_model](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/vp_model.gif)
 
 ##  EJP schema blocks
-![EJP schema blocks](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/_.png)
+![EJP schema blocks](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/ejprdSchemaBlocks.png)
 
 
 
