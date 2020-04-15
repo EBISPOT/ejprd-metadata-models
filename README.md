@@ -28,7 +28,7 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
   * The Biological-Sample [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/biological-sample.json)
   * The Biological-Sample-Patient [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/biological-sample-patient.json)
   * The Organisation [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/organisation.json)
-  * The Date-Time [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/biological-date-time.json)
+  * The Date-Time [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/date-time.json)
   * The Property-Value [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/property-value.json)
   * The Location [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/location.json)
   * The EUPID [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/eupid.json)
