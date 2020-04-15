@@ -33,8 +33,8 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
   * The Location [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/location.json)
   * The EUPID [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/eupid.json)
   * The Code [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/code.json)
-  * The CodingSystem [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/coding-system.json)
-  
+  * The Coding-System [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/coding-system.json)
+
 
     * Metadata Schema for VP in JSON format [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/docs/metadata_core_schema.txt)
     * Metadata Schema for VP in JSON format [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/docs/metadata_core_schema.txt)
