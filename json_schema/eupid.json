@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "additionalProperties": true,
+    "required": [
+        "EUPID"
+    ],
+    "properties": {
+        "EUPID": {
+            "$id": "#/properties/EUPID",
+            "type": "object",
+            "title": "The Eupid Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "EUPID": "eupid"
+                }
+            ],
+            "additionalProperties": true,
+            "required": [
+                "EUPID"
+            ],
+            "properties": {
+                "EUPID": {
+                    "$id": "#/properties/EUPID/properties/EUPID",
+                    "type": "string",
+                    "title": "The Eupid Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "eupid"
+                    ]
+                }
+            }
+        }
+    }
+}
