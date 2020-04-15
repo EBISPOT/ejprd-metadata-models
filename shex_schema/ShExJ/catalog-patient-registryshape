@@ -1,0 +1,11 @@
+prefix ejprd:          <http://www.ejprarediseases.org/metadata#>
+prefix sio:            <http://semanticscience.org/resource/>
+
+# Schema for Catalog-PatientRegistry
+<Catalog-PatientRegistry> {
+  a                      ( ejprd:Catalog-PatientRegistry)
+, sio:studyDesign        xsd:string         #the type of study plan
+, ejprd:hasBioBank       xsd:string         #the biobanks associated with the catalog-patient-registry
+, ejprd:inBioBank        xsd:string         #
+
+}

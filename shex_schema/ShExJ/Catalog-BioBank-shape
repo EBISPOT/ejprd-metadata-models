@@ -1,0 +1,9 @@
+prefix ejprd:          <http://www.ejprarediseases.org/metadata#>
+prefix omiabis:       <http://purl.obolibrary.org/obo/>
+
+# Schema for Catalog-BioBank
+<Catalog-BioBank> {
+  a                      ( omiabis:BioBank)
+, ejprd:recruiting       xsd:string         #the region for where employees are from
+
+}
