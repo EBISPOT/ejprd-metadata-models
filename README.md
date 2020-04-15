@@ -22,7 +22,7 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
 
 * The Schema in JSON format
   * The Catalog Entity [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/ejp-rdJSONSchemaModels.json)
-  * The Catalog-Patient-Registry [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/catalog-patient-registry.json)
+  * The Catalog-Patient-Registry [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/catalog-patientregistry.json)
   * The Catalog-BioBank [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/catalog-biobank.json)
   * The StudyDesign [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/studydesign.json)
   * The Biological-Sample [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/biological-sample.json)
