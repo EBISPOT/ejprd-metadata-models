@@ -1,0 +1,78 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "additionalProperties": true,
+    "required": [
+        "codingSystem"
+    ],
+    "properties": {
+        "codingSystem": {
+            "$id": "#/properties/codingSystem",
+            "type": "object",
+            "title": "The Codingsystem Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "url": "",
+                    "description": "",
+                    "label": "",
+                    "id": ""
+                }
+            ],
+            "additionalProperties": true,
+            "required": [
+                "id",
+                "url",
+                "label",
+                "description"
+            ],
+            "properties": {
+                "id": {
+                    "$id": "#/properties/codingSystem/properties/id",
+                    "type": "string",
+                    "title": "The Id Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "url": {
+                    "$id": "#/properties/codingSystem/properties/url",
+                    "type": "string",
+                    "title": "The Url Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "label": {
+                    "$id": "#/properties/codingSystem/properties/label",
+                    "type": "string",
+                    "title": "The Label Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "description": {
+                    "$id": "#/properties/codingSystem/properties/description",
+                    "type": "string",
+                    "title": "The Description Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                }
+            }
+        }
+    }
+}

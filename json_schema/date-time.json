@@ -1,0 +1,78 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "additionalProperties": true,
+    "required": [
+        "DateTime"
+    ],
+    "properties": {
+        "DateTime": {
+            "$id": "#/properties/DateTime",
+            "type": "object",
+            "title": "The Datetime Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "year": "year",
+                    "month": "month",
+                    "day": "day",
+                    "time": "time"
+                }
+            ],
+            "additionalProperties": true,
+            "required": [
+                "day",
+                "month",
+                "year",
+                "time"
+            ],
+            "properties": {
+                "day": {
+                    "$id": "#/properties/DateTime/properties/day",
+                    "type": "string",
+                    "title": "The Day Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "day"
+                    ]
+                },
+                "month": {
+                    "$id": "#/properties/DateTime/properties/month",
+                    "type": "string",
+                    "title": "The Month Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "month"
+                    ]
+                },
+                "year": {
+                    "$id": "#/properties/DateTime/properties/year",
+                    "type": "string",
+                    "title": "The Year Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "year"
+                    ]
+                },
+                "time": {
+                    "$id": "#/properties/DateTime/properties/time",
+                    "type": "string",
+                    "title": "The Time Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "time"
+                    ]
+                }
+            }
+        }
+    }
+}
