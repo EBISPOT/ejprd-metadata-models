@@ -25,8 +25,17 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
   * The Catalog-Patient-Registry [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/catalog-patient-registry.json)
   * The Catalog-BioBank [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/catalog-biobank.json)
   * The StudyDesign [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/studydesign.json)
-
+  * The Biological-Sample [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/biological-sample.json)
+  * The Biological-Sample-Patient [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/biological-sample-patient.json)
+  * The Organisation [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/organisation.json)
+  * The Date-Time [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/biological-date-time.json)
+  * The Property-Value [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/property-value.json)
+  * The Location [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/location.json)
+  * The EUPID [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/eupid.json)
+  * The Code [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/code.json)
+  * The CodingSystem [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/coding-system.json)
   
+
     * Metadata Schema for VP in JSON format [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/docs/metadata_core_schema.txt)
     * Metadata Schema for VP in JSON format [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/docs/metadata_core_schema.txt)
 
