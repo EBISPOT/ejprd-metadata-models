@@ -1,0 +1,174 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "additionalProperties": true,
+    "required": [
+        "BiologicalSample-Patient"
+    ],
+    "properties": {
+        "BiologicalSample-Patient": {
+            "$id": "#/properties/BiologicalSample-Patient",
+            "type": "object",
+            "title": "The Biologicalsample-patient Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "dateOfBirth": "DATETIME",
+                    "dateOfDeath": "DateTime",
+                    "diagnosisOfRareDisease": "DateTime",
+                    "firstContact": "DateTime",
+                    "undiagnosedCase": "Diagnosis",
+                    "additionalProperties": "property value",
+                    "geneticDiagnosis": "Diagnosis",
+                    "ageAtDianosis": "DateTime",
+                    "pseudonym": "EUPID",
+                    "sex": "code",
+                    "status": "code",
+                    "dignosis": "code"
+                }
+            ],
+            "additionalProperties": true,
+            "required": [
+                "pseudonym",
+                "dignosis",
+                "dateOfBirth",
+                "sex",
+                "status",
+                "dateOfDeath",
+                "firstContact",
+                "ageAtDianosis",
+                "diagnosisOfRareDisease",
+                "geneticDiagnosis",
+                "undiagnosedCase",
+                "additionalProperties"
+            ],
+            "properties": {
+                "pseudonym": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/pseudonym",
+                    "type": "string",
+                    "title": "The Pseudonym Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "EUPID"
+                    ]
+                },
+                "dignosis": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/dignosis",
+                    "type": "string",
+                    "title": "The Dignosis Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "code"
+                    ]
+                },
+                "dateOfBirth": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/dateOfBirth",
+                    "type": "string",
+                    "title": "The Dateofbirth Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "DATETIME"
+                    ]
+                },
+                "sex": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/sex",
+                    "type": "string",
+                    "title": "The Sex Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "code"
+                    ]
+                },
+                "status": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/status",
+                    "type": "string",
+                    "title": "The Status Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "code"
+                    ]
+                },
+                "dateOfDeath": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/dateOfDeath",
+                    "type": "string",
+                    "title": "The Dateofdeath Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "DateTime"
+                    ]
+                },
+                "firstContact": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/firstContact",
+                    "type": "string",
+                    "title": "The Firstcontact Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "DateTime"
+                    ]
+                },
+                "ageAtDianosis": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/ageAtDianosis",
+                    "type": "string",
+                    "title": "The Ageatdianosis Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "DateTime"
+                    ]
+                },
+                "diagnosisOfRareDisease": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/diagnosisOfRareDisease",
+                    "type": "string",
+                    "title": "The Diagnosisofraredisease Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "DateTime"
+                    ]
+                },
+                "geneticDiagnosis": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/geneticDiagnosis",
+                    "type": "string",
+                    "title": "The Geneticdiagnosis Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Diagnosis"
+                    ]
+                },
+                "undiagnosedCase": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/undiagnosedCase",
+                    "type": "string",
+                    "title": "The Undiagnosedcase Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Diagnosis"
+                    ]
+                },
+                "additionalProperties": {
+                    "$id": "#/properties/BiologicalSample-Patient/properties/additionalProperties",
+                    "type": "string",
+                    "title": "The Additionalproperties Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "property value"
+                    ]
+                }
+            }
+        }
+    }
+}
