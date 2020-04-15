@@ -16,7 +16,7 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
 ##  Metadata core schema for VP
 ![Metadata vp_model](https://github.com/S2Ola/ejprd-metadata-model/blob/master/images/vp_model.gif)
 
-##  EJP schema blocks
+##  EJP-RD Catalog schema blocks
 ![EJP schema blocks](https://github.com/S2Ola/ejprd-metadata-model/blob/master/images/ejprdSchemaBlocks.png)
 
 
@@ -25,11 +25,4 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
     * Metadata Schema for VP in JSON format [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/docs/metadata_core_schema.txt)
 
 
-* [ejp-rd/api]() -
-* [JSON2RDF]() -
-* [RDF-Schema]() -
-* [ShEx]()-
-* [ShACl]()-
-* [Metadata-publication]() -
-* [SPARQL-QUERY]()-
-* [QUERY-OUTPUT]() -
+* The application/schema+json for the EJP-RD Schema block models demonstrating the JSON schema data model is recorded [here]{}.
