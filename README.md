@@ -45,12 +45,3 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
 
   The jar file can be invoke from the command line using the following command :
   " cat file.json | java -jar json2rdf.jar https://www.ejprarediseases.org/metadata# | riot --formatted=TURTLE "
-
-
-
-
-    * Metadata Schema for VP in JSON format [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/docs/metadata_core_schema.txt)
-    * Metadata Schema for VP in JSON format [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/docs/metadata_core_schema.txt)
-
-
-* The application/schema+json for the EJP-RD Schema block models demonstrating the JSON schema data model is recorded [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/docs/ejp-rdJSONSchemaModels.txt).
