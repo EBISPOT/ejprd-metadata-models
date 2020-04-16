@@ -44,4 +44,4 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
 * The JSON to RDF converter [here](https://github.com/S2Ola/ejprd-metadata-model/tree/master/JSON2RDF)
 
   The jar file can be invoke from the command line using the following command :
-  " cat file.json | java -jar json2rdf.jar https://www.ejprarediseases.org/metadata# | riot --formatted=TURTLE "
+  " cat "filename".json | java -jar json2rdf.jar https://www.ejprarediseases.org/metadata# | riot --formatted=TURTLE "
