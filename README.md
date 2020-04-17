@@ -1,6 +1,6 @@
 # Metadata for EJP rare disease patient registries, biobanks and catalogs
 
-This is for publishing [European Joint Programme (EJP) for Rare Disease](http://www.ejprarediseases.org) virtual platform metadata for Biobanks and Catalogs metadata, through the  extraction, conversion, RDF schema and validating the data RDF data using the ShExC.
+This is for publishing [European Joint Programme (EJP) for Rare Disease](http://www.ejprarediseases.org) virtual platform metadata for registries,  Biobanks and Catalogs metadata, through the  extraction, conversion, RDF schema and validating the data RDF data using the ShExC.
 
  We are also working to align with similar schema standardisation efforts such as [RD connect semantic model](https://github.com/LUMC-BioSemantics/Rare-Disease-Semantic-Model), [schema.org](https://schema.org), [bioschemas](https://bioschemas.org), [MIABIS](https://github.com/MIABIS/miabis/wiki) and [GA4GH](https://www.ga4gh.org) (see also [schema blocks](https://schemablocks.org) and [phenopackets](http://phenopackets.org). A proposed semantic model for the Common Data Elements can be found [here](https://github.com/LUMC-BioSemantics/ERN-common-data-elements).
 
