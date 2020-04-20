@@ -1,6 +1,6 @@
 # Metadata for EJP rare disease patient registries, biobanks and catalogs
 
-This is for publishing [European Joint Programme (EJP) for Rare Disease](http://www.ejprarediseases.org) virtual platform metadata for registries,  Biobanks and Catalogs metadata, through the  extraction, conversion, RDF schema and validating the data RDF data using the ShExC.
+This is for publishing [European Joint Programme (EJP) for Rare Disease](http://www.ejprarediseases.org) virtual platform metadata for Biobanks and Catalogs metadata, through the  extraction, conversion, RDF schema and validating the data RDF data using the ShExC.
 
  We are also working to align with similar schema standardisation efforts such as [RD connect semantic model](https://github.com/LUMC-BioSemantics/Rare-Disease-Semantic-Model), [schema.org](https://schema.org), [bioschemas](https://bioschemas.org), [MIABIS](https://github.com/MIABIS/miabis/wiki) and [GA4GH](https://www.ga4gh.org) (see also [schema blocks](https://schemablocks.org) and [phenopackets](http://phenopackets.org). A proposed semantic model for the Common Data Elements can be found [here](https://github.com/LUMC-BioSemantics/ERN-common-data-elements).
 
@@ -12,6 +12,13 @@ This is the entire codebase for the EJP-RD Metadata publishers. The model is bas
 
 EJP-RD Metadata standard is build around two major standards - [JSON](https://json-schema.org/) and [RDF](https://www.w3.org/RDF/) standard models for data exchange.
 
+#Validators:
+ * JSON Schema tool for validating the structure of JSON data, from the various registries, biobanks, or etc through the API or Web URL.
+
+ * RDF schema tool for validating the RDF graph
+
+ * ShEx Schema tool for validating the RDF graph data
+
 The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed below:
 ##  Metadata core schema for VP
 ![Metadata vp_model](https://github.com/S2Ola/ejprd-metadata-model/blob/master/images/vp_model.gif)
@@ -20,7 +27,7 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
 ![EJP schema blocks](https://github.com/S2Ola/ejprd-metadata-model/blob/master/images/ejprdSchemaBlocks.png)
 
 
-* The Schema in JSON format
+* The EJP-RD VP Catalog Schema in JSON format
   * The Catalog Entity [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/ejp-rdJSONSchemaModels.json)
   * The Catalog-Patient-Registry [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/catalog-patientregistry.json)
   * The Catalog-BioBank [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/catalog-biobank.json)
