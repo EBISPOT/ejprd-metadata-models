@@ -1,0 +1,14 @@
+{
+   "PropertyValue":{
+      "name":"name",
+      "value":"value",
+      "code":{
+         "code":{
+            "id":"ID",
+            "url":"url",
+            "label":"label",
+            "description":"description"
+         }
+      }
+   }
+}

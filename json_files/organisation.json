@@ -1,0 +1,14 @@
+{
+  "organisation":{
+  "name":"name",
+  "facility": "facility",
+  "department": "department",
+  "address": {
+    "location":{
+      "street": "street",
+      "city": "city",
+      "code": "code",
+      "country": "country"
+    }
+  }
+}
