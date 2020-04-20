@@ -28,19 +28,19 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
 
 
 * The EJP-RD VP Catalog Schema in JSON format
-  * The Catalog Entity [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/ejp-rdJSONSchemaModels.json)
-  * The Catalog-Patient-Registry [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/catalog-patientregistry.json)
-  * The Catalog-BioBank [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/catalog-biobank.json)
-  * The StudyDesign [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/studydesign.json)
-  * The Biological-Sample [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/biological-sample.json)
-  * The Biological-Sample-Patient [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/biological-sample-patient.json)
-  * The Organisation [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/organisation.json)
-  * The Date-Time [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/date-time.json)
-  * The Property-Value [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/property-value.json)
-  * The Location [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/location.json)
-  * The EUPID [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/eupid.json)
-  * The Code [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/code.json)
-  * The Coding-System [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_schema/coding-system.json)
+  * The Catalog Entity [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/catalog.json)
+  * The Catalog-Patient-Registry [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/catalog-patientregistry.json)
+  * The Catalog-BioBank [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/catalog-biobank.json)
+  * The StudyDesign [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/studydesign.json)
+  * The Biological-Sample [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/BiologicalSample.json)
+  * The Biological-Sample-Patient [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/bioslogicalSamplePatient.json)
+  * The Organisation [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/organisation.json)
+  * The Date-Time [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/datetime.json)
+  * The Property-Value [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/propertyvalue.json)
+  * The Location [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/location.json)
+  * The EUPID [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/eupid.json)
+  * The Code [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/code.json)
+  * The Coding-System [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/codingSystem.json)
 
 * The Validators - ShEx Constrains Schemas
   * The ShExC for Catalog-BioBank [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/ShExJ/Catalog-BioBank-shape)
