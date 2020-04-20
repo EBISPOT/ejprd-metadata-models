@@ -1,63 +1,69 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://example.com/example.json",
     "type": "object",
     "title": "The Root Schema",
     "description": "The root schema comprises the entire JSON document.",
     "default": {},
     "additionalProperties": true,
     "required": [
-        "PropertyValue"
+        "location"
     ],
     "properties": {
-        "PropertyValue": {
-            "$id": "#/properties/PropertyValue",
+        "location": {
             "type": "object",
-            "title": "The Propertyvalue Schema",
+            "title": "The Location Schema",
             "description": "An explanation about the purpose of this instance.",
             "default": {},
             "examples": [
                 {
-                    "value": "value",
-                    "name": "name",
-                    "code": "code"
+                    "city": "city",
+                    "street": "street",
+                    "code": "code",
+                    "country": "country"
                 }
             ],
             "additionalProperties": true,
             "required": [
-                "name",
-                "value",
-                "code"
+                "street",
+                "city",
+                "code",
+                "country"
             ],
             "properties": {
-                "name": {
-                    "$id": "#/properties/PropertyValue/properties/name",
+                "street": {
                     "type": "string",
-                    "title": "The Name Schema",
+                    "title": "The Street Schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "name"
+                        "street"
                     ]
                 },
-                "value": {
-                    "$id": "#/properties/PropertyValue/properties/value",
+                "city": {
                     "type": "string",
-                    "title": "The Value Schema",
+                    "title": "The City Schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "value"
+                        "city"
                     ]
                 },
                 "code": {
-                    "$id": "#/properties/PropertyValue/properties/code",
                     "type": "string",
                     "title": "The Code Schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
                         "code"
+                    ]
+                },
+                "country": {
+                    "type": "string",
+                    "title": "The Country Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "country"
                     ]
                 }
             }
