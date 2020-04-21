@@ -42,6 +42,9 @@ The metadata core schema as shown for the EJP_RD virtual platform(VP) displayed 
   * The Code [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/code.json)
   * The Coding-System [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/json_files/codingSystem.json)
 
+  ##  EJP-RD Data format converter (JSON to RDF) workflow
+  ![EJP-RD Data Converter JSON to RDF Workflow ](https://github.com/S2Ola/ejprd-metadata-model/blob/master/images/JSON2RDFWRKFLOW.jpg)
+
 * The Validators - ShEx Constrains Schemas
   * The ShExC for Catalog-BioBank [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/ShExJ/Catalog-BioBank-shape)
   * The ShExC for Catalog [here](https://github.com/S2Ola/ejprd-metadata-model/blob/master/shex_schema/ShExJ/catalog_shape)
