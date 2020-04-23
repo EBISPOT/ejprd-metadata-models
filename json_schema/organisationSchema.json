@@ -1,0 +1,151 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "additionalProperties": true,
+    "required": [
+        "organisation"
+    ],
+    "properties": {
+        "organisation": {
+            "type": "object",
+            "title": "The Organisation Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "facility": "facility",
+                    "address": {
+                        "location": {
+                            "country": "country",
+                            "city": "city",
+                            "street": "street",
+                            "code": "code"
+                        }
+                    },
+                    "name": "name",
+                    "department": "department"
+                }
+            ],
+            "additionalProperties": true,
+            "required": [
+                "name",
+                "facility",
+                "department",
+                "address"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "name"
+                    ]
+                },
+                "facility": {
+                    "type": "string",
+                    "title": "The Facility Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "facility"
+                    ]
+                },
+                "department": {
+                    "type": "string",
+                    "title": "The Department Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "department"
+                    ]
+                },
+                "address": {
+                    "type": "object",
+                    "title": "The Address Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "location": {
+                                "country": "country",
+                                "city": "city",
+                                "street": "street",
+                                "code": "code"
+                            }
+                        }
+                    ],
+                    "additionalProperties": true,
+                    "required": [
+                        "location"
+                    ],
+                    "properties": {
+                        "location": {
+                            "type": "object",
+                            "title": "The Location Schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                                {
+                                    "city": "city",
+                                    "street": "street",
+                                    "code": "code",
+                                    "country": "country"
+                                }
+                            ],
+                            "additionalProperties": true,
+                            "required": [
+                                "street",
+                                "city",
+                                "code",
+                                "country"
+                            ],
+                            "properties": {
+                                "street": {
+                                    "type": "string",
+                                    "title": "The Street Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "street"
+                                    ]
+                                },
+                                "city": {
+                                    "type": "string",
+                                    "title": "The City Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "city"
+                                    ]
+                                },
+                                "code": {
+                                    "type": "string",
+                                    "title": "The Code Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "code"
+                                    ]
+                                },
+                                "country": {
+                                    "type": "string",
+                                    "title": "The Country Schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "country"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

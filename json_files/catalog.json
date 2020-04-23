@@ -1,0 +1,25 @@
+{
+   "catalog":{
+      "identifier":"identifier",
+      "alternative":"alternative",
+      "about":{
+           "code":{
+              "id":"ID",
+              "url":"url",
+              "label":"label",
+              "description":"description"
+           }
+        },
+      "name":"name",
+      "description":"description",
+      "homepage":"homepage",
+      "sameAs":"same name as",
+      "location":{
+          "street": "street",
+          "city": "city",
+          "code": "code",
+          "country": "country"
+        }
+    }
+
+}

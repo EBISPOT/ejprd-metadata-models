@@ -1,75 +1,69 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://example.com/example.json",
     "type": "object",
     "title": "The Root Schema",
     "description": "The root schema comprises the entire JSON document.",
     "default": {},
     "additionalProperties": true,
     "required": [
-        "DateTime"
+        "location"
     ],
     "properties": {
-        "DateTime": {
-            "$id": "#/properties/DateTime",
+        "location": {
             "type": "object",
-            "title": "The Datetime Schema",
+            "title": "The Location Schema",
             "description": "An explanation about the purpose of this instance.",
             "default": {},
             "examples": [
                 {
-                    "year": "year",
-                    "month": "month",
-                    "day": "day",
-                    "time": "time"
+                    "city": "city",
+                    "street": "street",
+                    "code": "code",
+                    "country": "country"
                 }
             ],
             "additionalProperties": true,
             "required": [
-                "day",
-                "month",
-                "year",
-                "time"
+                "street",
+                "city",
+                "code",
+                "country"
             ],
             "properties": {
-                "day": {
-                    "$id": "#/properties/DateTime/properties/day",
+                "street": {
                     "type": "string",
-                    "title": "The Day Schema",
+                    "title": "The Street Schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "day"
+                        "street"
                     ]
                 },
-                "month": {
-                    "$id": "#/properties/DateTime/properties/month",
+                "city": {
                     "type": "string",
-                    "title": "The Month Schema",
+                    "title": "The City Schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "month"
+                        "city"
                     ]
                 },
-                "year": {
-                    "$id": "#/properties/DateTime/properties/year",
+                "code": {
                     "type": "string",
-                    "title": "The Year Schema",
+                    "title": "The Code Schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "year"
+                        "code"
                     ]
                 },
-                "time": {
-                    "$id": "#/properties/DateTime/properties/time",
+                "country": {
                     "type": "string",
-                    "title": "The Time Schema",
+                    "title": "The Country Schema",
                     "description": "An explanation about the purpose of this instance.",
                     "default": "",
                     "examples": [
-                        "time"
+                        "country"
                     ]
                 }
             }

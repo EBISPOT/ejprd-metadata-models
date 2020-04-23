@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "additionalProperties": true,
+    "required": [
+        "code"
+    ],
+    "properties": {
+        "code": {
+            "type": "object",
+            "title": "The Code Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "url": "url",
+                    "description": "description",
+                    "label": "label",
+                    "id": "ID"
+                }
+            ],
+            "additionalProperties": true,
+            "required": [
+                "id",
+                "url",
+                "label",
+                "description"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "The Id Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "ID"
+                    ]
+                },
+                "url": {
+                    "type": "string",
+                    "title": "The Url Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "url"
+                    ]
+                },
+                "label": {
+                    "type": "string",
+                    "title": "The Label Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "label"
+                    ]
+                },
+                "description": {
+                    "type": "string",
+                    "title": "The Description Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "description"
+                    ]
+                }
+            }
+        }
+    }
+}

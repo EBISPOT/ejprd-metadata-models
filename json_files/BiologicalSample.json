@@ -1,0 +1,57 @@
+{
+   "BiologicalSample":{
+      "identifier":"identifier",
+      "name":"name",
+      "description":"description",
+      "inCatalog":{
+         "catalog":{
+            "identifier":"identifier",
+            "alternative":"alternative",
+            "about":{
+                 "code":{
+                    "id":"ID",
+                    "url":"url",
+                    "label":"label",
+                    "description":"description"
+                 }
+              },
+            "name":"name",
+            "description":"description",
+            "homepage":"homepage",
+            "sameAs":"same as name",
+            "location":{
+              "organisation":{
+              "name":"name",
+              "facility": "facility",
+              "department": "department",
+              "address": {
+                "location":{
+                  "street": "street",
+                  "city": "city",
+                  "code": "code",
+                  "country": "country"
+                }
+              }
+            }
+
+            }
+         }
+      }
+,
+      "Characteristics":{
+         "PropertyValue":{
+            "name":"name",
+            "value":"value",
+            "code":{
+               "code":{
+                  "id":"ID",
+                  "url":"url",
+                  "label":"label",
+                  "description":"description"
+               }
+            }
+         }
+      }
+
+   }
+}

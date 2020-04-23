@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "additionalProperties": true,
+    "required": [
+        "DateTime"
+    ],
+    "properties": {
+        "DateTime": {
+            "type": "object",
+            "title": "The Datetime Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "year": "year",
+                    "day": "day",
+                    "month": "month",
+                    "time": "time"
+                }
+            ],
+            "additionalProperties": true,
+            "required": [
+                "day",
+                "month",
+                "year",
+                "time"
+            ],
+            "properties": {
+                "day": {
+                    "type": "string",
+                    "title": "The Day Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "day"
+                    ]
+                },
+                "month": {
+                    "type": "string",
+                    "title": "The Month Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "month"
+                    ]
+                },
+                "year": {
+                    "type": "string",
+                    "title": "The Year Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "year"
+                    ]
+                },
+                "time": {
+                    "type": "string",
+                    "title": "The Time Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "time"
+                    ]
+                }
+            }
+        }
+    }
+}

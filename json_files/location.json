@@ -1,0 +1,8 @@
+{
+  "location":{
+    "street": "street",
+    "city": "city",
+    "code": "code",
+    "country": "country"
+  }
+}
