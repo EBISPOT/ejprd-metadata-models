@@ -8,9 +8,9 @@ This diagram illustrates the basic idea of the metadata publication workflow. Co
 
 # EJPRD namespace nomenclature
 
-For defining ejprd vocabulary : http://www.ejprd.org/metdata/core
-For defining the ejprd classes: http://www.ejprd.org/metadata/core#ClassesA
-For defining the ejprd properties: http://www.ejprd.org/metadata/core#PropertiesA
+* For defining ejprd vocabulary : http://www.ejprd.org/metdata/core
+* For defining the ejprd classes: http://www.ejprd.org/metadata/core#ClassesA
+* For defining the ejprd properties: http://www.ejprd.org/metadata/core#PropertiesA
 
 
 # WORKFLOW FOR EJP-RD METADATA PUBLISHING
