@@ -7,7 +7,10 @@ This is for publishing [European Joint Programme (EJP) for Rare Disease](http://
 This diagram illustrates the basic idea of the metadata publication workflow. Components are independent and can be used and new blocks can be defined that inherit from parent blocks.
 
 # EJPRD namespace nomenclature
-
+* The scheme : https
+* The authority: www.ejprddiseases.org
+* The path : "/"
+* The fragment: starts with "#"
 * For defining ejprd vocabulary : https://www.ejprarediseases.org/metdata/core
 * For defining the ejprd classes: https://www.ejprarediseases.org/metadata/core#ClassesA
 * For defining the ejprd properties: https://www.ejprarediseases.org/metadata/core#PropertiesA
