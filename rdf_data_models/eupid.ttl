@@ -1,0 +1,8 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ejp: <http://purl.org/ejp-rd/vocabulary/> .
+
+
+
+
+<https://www.ejprarediseases.org/metadata/> a ejp:EUPID ;
+dc:identifier  xsd:string .

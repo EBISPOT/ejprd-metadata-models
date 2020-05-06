@@ -1,0 +1,10 @@
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ejprd: <https://www.ejprarediseases.org/metadata/core#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+
+<https://www.ejprarediseases.org/metadata/> a obo:location ;
+                        obo:street xsd:string ;
+                        sio:city xsd:string ;
+                        obo:code xsd:string ;
+                        sio:country xsd:string .
