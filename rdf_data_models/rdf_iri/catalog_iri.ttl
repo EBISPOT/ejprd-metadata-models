@@ -16,22 +16,22 @@
 <https://www.ejprarediseases.org/metadata/> a ejp:Catalog ;
     dc:identifier  xsd:string ;
     dcterms:alternativename xsd:string ;
-    sio:name xsd:string ;
-    sio:description xsd:string ;
+    sio:SIO_000116  xsd:string ;
+    sio:SIO:000136 xsd:string ;
     ejprd:about [ ejprd:code
                       [ ejprd:id xsd:string ;
-                        sio:url xsd:string ;
+                        sio:SIO_000811 xsd:string ;
                         rdfs:label xsd:string ;
-                        ejprd:descritpiton [obo:Biobank xsd:string.]
+                        ejprd:descritpiton [obo:OMIABIS_0000000 xsd:string.]
                       . ] ;
-    obo:location [ obo:organisation
-                    [obo:name xsd:string ;
-                        obo:facility xsd:string ;
-                        obo:department xsd:string ;
-                        sio:address [obo:location[ obo:street xsd:string ;
-                        sio:city xsd:string ;
-                        obo:code xsd:string ;
-                        sio:country xsd:string
+    obo:NCIT_C25341 [ obo:OBI_0000245
+                    [obo:NCIT_C42614 xsd:string ;
+                        obo:NCIT_C62574 xsd:string ;
+                        obo:OMIABIS_0000017 xsd:string ;
+                        sio:SIO_000172 [obo:NCIT:C25341[ obo:OMIABIS_0000041 xsd:string ;
+                        sio:SIO_000665 xsd:string ;
+                        obo:NCIT_C25162 xsd:string ;
+                        sio:SIO:000664 xsd:string
                     . ]
                 .]
             . ]
