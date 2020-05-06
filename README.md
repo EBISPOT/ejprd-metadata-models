@@ -8,7 +8,7 @@ This diagram illustrates the basic idea of the metadata publication workflow. Co
 
 # EJPRD namespace nomenclature
 * The scheme : https
-* The authority: www.ejprddiseases.org
+* The authority: https://www.ejprarediseases.org/
 * The path : "/"
 * The fragment: starts with "#"
 * For defining ejprd vocabulary : https://www.ejprarediseases.org/metdata/core
