@@ -6,8 +6,16 @@
 
 
 <https://www.ejprarediseases.org/metadata/> a ejp:BioBank ;
-    dc:identifier  xsd:string ;
-    ejprd:hostInstituition xsd:string;
-    sio:name xsd:string ;
-    sio:city xsd:string ;
-    sio:country xsd:string .
+    dc:identifier <http://catalogue.rd-connect.eu/web/ciberer-biobank/bb_home> ;
+    ejprd:hostInstituition "CIBER, ISCIII - Ministry of Economy, Industry and Competitiveness";
+    sio:name "CIBERER Biobank" ;
+    sio:city "Madrid" ;
+    sio:country "Spain" .
+
+
+<https://www.ejprarediseases.org/metadata/> a ejp:BioBank ;
+   dc:identifier <http://catalogue.rd-connect.eu/web/44001/bb_home> ;
+   ejprd:hostInstituition "Avda. Monforte de Lemos";
+   sio:name "Biobank of the Institute of Rare Diseases Research/Institute of Health Carlos III (IIER-ISCIII)	" ;
+   sio:city "Madrid" ;
+   sio:country "Spain" .

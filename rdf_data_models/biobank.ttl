@@ -6,7 +6,7 @@
 
 
 <https://www.ejprarediseases.org/metadata/> a ejp:BioBank ;
-    dc:identifier  xsd:string ;
+    dc:identifier xsd:anyURI ;
     ejprd:hostInstituition xsd:string;
     sio:name xsd:string ;
     sio:city xsd:string ;

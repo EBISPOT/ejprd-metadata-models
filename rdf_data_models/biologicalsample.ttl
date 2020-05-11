@@ -13,61 +13,52 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 
 
-<https://www.ejprarediseases.org/metadata/> a obo:Biospecimen ;
+<https://www.ejprarediseases.org/metadata/> a obo:Biological-sample ;
 dc:identifier  xsd:string ;
 sio:name xsd:string ;
 sio:description xsd:string ;
 ejprd:inCatalog ejp:catalog ;
+ejp:characteristics ejp:propertyvalue .
 
 
-ejp:catalog
-    ejp:Catalog ;
+ejp:catalog 
     dc:identifier  xsd:string ;
     dcterms:alternativename xsd:string ;
     sio:name xsd:string ;
     sio:description xsd:string ;
-    ejprd:about [ ejprd:code
-                      [ ejprd:id xsd:string ;
-                        sio:url xsd:string ;
-                        rdfs:label xsd:string ;
-                        ejprd:descritpiton [obo:Biobank xsd:string]
-                       ] ;
-    obo:location [ obo:organisation
-                    [obo:name xsd:string ;
-                        obo:facility xsd:string ;
-                        obo:department xsd:string ;
-                        sio:address [obo:location[ obo:street xsd:string ;
-                        sio:city xsd:string ;
-                        obo:code xsd:string ;
-                        sio:country xsd:string
-                     ]
-                ]
-             ]
-          ]
-        ].
+    ejprd:about  ejprd:code ;
+    obo:location obo:organisation .
+
+ejprd:code
+    ejprd:id xsd:string ;
+    sio:url xsd:string ;
+    rdfs:label xsd:string ;
+    ejprd:descritpiton obo:biobank .
 
 
-        <https://www.ejprarediseases.org/metadata/> a ejp:Catalog ;
-            dc:identifier  xsd:string ;
-            dcterms:alternativename xsd:string ;
-            sio:name xsd:string ;
-            sio:description xsd:string ;
-            ejprd:about [ ejprd:code
-                              [ ejprd:id xsd:string ;
-                                sio:url xsd:string ;
-                                rdfs:label xsd:string ;
-                                ejprd:descritpiton [obo:Biobank xsd:string]
-                               ] ;
-            obo:location [ obo:organisation
-                            [obo:name xsd:string ;
-                                obo:facility xsd:string ;
-                                obo:department xsd:string ;
-                                sio:address [obo:location[ obo:street xsd:string ;
-                                sio:city xsd:string ;
-                                obo:code xsd:string ;
-                                sio:country xsd:string
-                             ]
-                        ]
-                     ]
-                  ]
-                ].
+ejp:BioBank
+    dc:identifier xsd:anyURI ;
+    ejprd:hostInstituition xsd:string;
+    sio:name xsd:string ;
+    sio:city xsd:string ;
+    sio:country xsd:string .
+
+
+obo:organisation
+    obo:name xsd:string ;
+    obo:facility xsd:string ;
+    obo:department xsd:string ;
+    sio:address obo:location .
+
+
+obo:location
+    obo:street xsd:string ;
+    sio:city xsd:string ;
+    obo:code xsd:string ;
+    sio:country xsd:string .
+
+
+ejp:propertyvalue
+    sio:name xsd:string ;
+    obo:value xsd:string ;
+    ejprd:code ejprd:code .

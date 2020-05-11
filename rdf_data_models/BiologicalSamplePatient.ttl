@@ -28,7 +28,7 @@
       ejprd:diagnosisOfRareDisease  ejprd:dateTime ;
       ejprd:geneticDiagnosis xsd:string ;
       ejprd:undiagnosisCase xsd:string ;
-      ejprd:additionalProperties ejp:propertyValue .
+      ejprd:additionalProperties ejp:propertyvalue .
 
 <https://www.ejprarediseases.org/metadata/> a ejp:EUPID ;
     dc:identifier  xsd:string .
@@ -45,7 +45,7 @@
     sio:year xsd:gYear;
     sio:timeinstant xsd:time .
 
-<https://www.ejprarediseases.org/metadata/> a ejp:property_value ;
+<https://www.ejprarediseases.org/metadata/> a ejp:propertyvalue ;
     sio:name xsd:string ;
     obo:value xsd:string ;
     ejprd:code  ejprd:code .
