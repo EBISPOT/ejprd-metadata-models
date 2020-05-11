@@ -1,0 +1,17 @@
+@prefix ejp: <http://purl.org/ejp-rd/vocabulary/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ejprd: <https://www.ejprarediseases.org/metadata/core#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+
+<https://www.ejprarediseases.org/metadata/> a ejp:property_value ;
+    sio:name xsd:string ;
+    obo:value xsd:string ;
+    ejprd:code [ ejprd:code
+                      [ ejprd:id xsd:string ;
+                        sio:url xsd:string ;
+                        rdfs:label xsd:string ;
+                        ejprd:descritpiton [obo:biobank xsd:string]
+                       ] ].

@@ -1,0 +1,52 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ejp: <http://purl.org/ejp-rd/vocabulary/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ejprd: <https://www.ejprarediseases.org/metadata/core#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+
+<https://www.ejprarediseases.org/metadata/> a ejp:studydesign ;
+  obo:inclusionExclusionCriteria xsd:string;
+  ejprd:recruitmentarea [obo:location
+                           [obo:street xsd:string ;
+                                sio:city xsd:string ;
+                                obo:code xsd:string ;
+                                sio:country xsd:string ]
+                        ];
+  ejprd:recruitmentStartDate [ ejp:datetime [
+                                  sio:day xsd:gDay;
+                                  sio:month xsd:gMonth;
+                                  sio:year xsd:gYear;
+                                  sio:timeinstant xsd:time] ];
+
+  ejprd:recruitmentStartDate [ ejp:datetime [
+                                  sio:day xsd:gDay;
+                                  sio:month xsd:gMonth;
+                                  sio:year xsd:gYear;
+                                  sio:timeinstant xsd:time] ];
+  obo:datasource [ ejprd:code[
+                              ejprd:id  xsd:string ;
+                              sio:url xsd:string ;
+                              rdfs:label xsd:string ;
+                              ejprd:descritpiton[obo:biobank xsd:string]]];
+
+  ejprd:privacypolicy xsd:string;
+  ejprd:ethicalReviewCommittee xsd:string;
+  ejprd:availableforfutureCollaboration xsd:string;
+  ejprd:additionalProperties [ ejp:property_value [
+                                sio:name xsd:string ;
+                                obo:value xsd:string ;
+                                ejprd:code [ ejprd:code
+                                                  [ ejprd:id xsd:string ;
+                                                    sio:url xsd:string ;
+                                                    rdfs:label xsd:string ;
+                                                    ejprd:descritpiton [obo:biobank xsd:string]
+                                                   ] ] ] ].
