@@ -22,8 +22,8 @@
                       [ ejprd:id xsd:string ;
                         sio:url xsd:string ;
                         rdfs:label xsd:string ;
-                        ejprd:descritpiton [obo:Biobank xsd:string.]
-                      . ] ;
+                        ejprd:descritpiton [obo:Biobank xsd:string ]
+                       ] ;
     obo:location [ obo:organisation
                     [obo:name xsd:string ;
                         obo:facility xsd:string ;
@@ -32,8 +32,8 @@
                         sio:city xsd:string ;
                         obo:code xsd:string ;
                         sio:country xsd:string
-                    . ]
-                .]
-            . ]
-          .]
+                     ]
+                ]
+             ]
+          ]
         ].

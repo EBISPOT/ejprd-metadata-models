@@ -13,5 +13,5 @@
                       [ ejprd:id xsd:string ;
                         sio:url xsd:string ;
                         rdfs:label xsd:string ;
-                        ejprd:descritpiton [obo:biobank xsd:string.]
-                      . ] ].
+                        ejprd:descritpiton [obo:biobank xsd:string]
+                       ] ].

@@ -1,5 +1,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ejprd: <https://www.ejprarediseases.org/metadata/core#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 
@@ -8,4 +9,4 @@
       ejprd:id  xsd:string ;
       sio:url xsd:string ;
       rdfs:label xsd:string ;
-      ejprd:descritpiton[obo:biobank xsd:string.] .
+      ejprd:descritpiton[obo:biobank xsd:string] .
