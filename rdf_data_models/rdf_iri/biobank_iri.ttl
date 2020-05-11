@@ -1,0 +1,13 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ejp: <http://purl.org/ejp-rd/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ejprd: <https://www.ejprarediseases.org/metadata/core#> .
+
+
+<https://www.ejprarediseases.org/metadata/> a <http://purl.org/ejp-rd/vocabulary/BioBank> ;
+    <http://purl.org/dc/elements/1.1/identifier> xsd:anyURI ;
+    <https://www.ejprarediseases.org/metadata/core#hostInstituition> xsd:string;
+    <http://semanticscience.org/resource/SIO_000116> xsd:string ;
+    <http://semanticscience.org/resource/SIO_000665> xsd:string ;
+    <http://semanticscience.org/resource/SIO_000664> xsd:string .
