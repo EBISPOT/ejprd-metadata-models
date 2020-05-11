@@ -1,14 +1,14 @@
-PREFIX dc: <http://purl.org/dc/elements/1.1/> .
-PREFIX dcat: <http://www.w3.org/ns/dcat#> .
-PREFIX dcterms: <http://purl.org/dc/terms/> .
-PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#> .
-PREFIX ex: <https://dcat.example.org/> .
-PREFIX sio: <http://semanticscience.org/resource/> .
-PREFIX foaf: <http://xmlns.com/foaf/0.1/> .
-PREFIX obo: <http://purl.obolibrary.org/obo/> .
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-PREFIX xsd: <http: //www.w3.org /2001/ XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ejprd: <https://www.ejprarediseases.org/metadata/core#> .
+@prefix ex: <https://dcat.example.org/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http: //www.w3.org /2001/ XMLSchema#> .
 
 
 dc:catalog IRI

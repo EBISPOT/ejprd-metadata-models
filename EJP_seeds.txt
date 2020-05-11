@@ -1,0 +1,13 @@
+study design ^ http://purl.obolibrary.org/obo/OBI_0500000
+Inclusion Exclusion Criteria Yes No Indicator http://purl.obolibrary.org/obo/NCIT_C83063
+day ^ http://semanticscience.org/resource/SIO_000430
+month ^ http://semanticscience.org/resource/SIO_000429
+year ^ http://semanticscience.org/resource/SIO_000428
+Data Source ^ http://purl.obolibrary.org/obo/NCIT_C16493
+Pseudonym ^ http://purl.obolibrary.org/obo/NCIT_C80244
+diagnosis ^ http://semanticscience.org/resource/SIO_001331
+date of birth ^ http://www.ebi.ac.uk/efo/EFO_0004950
+status descriptor ^ http://semanticscience.org/resource/SIO_001326
+Date of Death ^ http://purl.obolibrary.org/obo/NCIT_C70810
+age at onset ^  http://www.ebi.ac.uk/efo/EFO_0004847
+age at diagnosis ^ http://www.ebi.ac.uk/efo/EFO_0004918
