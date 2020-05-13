@@ -1,19 +1,4 @@
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX sio: <http://semanticscience.org/resource/>
-PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
-
-
-ejp:BioBankShape {
-    dc:identifier IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/ ;
-    ejprd:hostejpituition xsd:string;
-    sio:name xsd:string ;
-    sio:city xsd:string ;
-    sio:country LITERAL
-}
-
-
+#ShExC Schema
 
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
@@ -31,6 +16,7 @@ ejp:BioBankShape {
 }
 
 
+#The RDF graph data
 
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
@@ -68,7 +54,7 @@ inst:BioBank        ejp:BioBankShape
 
 
 
-Results:
+# Results:
 
 [{
   "node": "http://inst.example/#BioBank1",
