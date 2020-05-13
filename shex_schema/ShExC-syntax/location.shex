@@ -1,0 +1,78 @@
+#ShExC Schema
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX sio: <http://semanticscience.org/resource/>
+
+
+
+obo:locationShape {
+                  sio:city xsd:string ;
+                  obo:code xsd:string ;
+                  sio:country xsd:string
+                  }
+
+
+
+
+# The RDF graph data
+
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX inst: <http://inst.example/#>
+
+
+inst:location a obo:location ;
+                  sio:city "Milan"^^xsd:string ;
+                  obo:code "M123"^^xsd:string ;
+                  sio:country "Spain"^^xsd:string .
+
+
+
+inst:location@obo:locationShape
+
+
+# Result
+
+[{
+  "node": "http://inst.example/#location",
+  "shape": "http://purl.obolibrary.org/obo/locationShape",
+  "status": "conformant",
+  "elapsed": 14
+}]
+
+
+
+
+
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX inst: <http://inst.example/#>
+
+
+inst:location a obo:location ;
+                  sio:city "Milan"^^xsd:string ;
+                  obo:code 123 ;
+                  sio:country "Spain"^^xsd:string .
+
+
+
+
+
+
+# Result
+
+[{
+  "node": "http://inst.example/#location",
+  "shape": "http://purl.obolibrary.org/obo/locationShape",
+  "status": "nonconformant",
+  "elapsed": 34,
+  "reason": "validating http://inst.example/#location as http://purl.obolibrary.org/obo/locationShape:\n    validating \"123\"^^http://www.w3.org/2001/XMLSchema#integer:\n      Error validating \"123\"^^http://www.w3.org/2001/XMLSchema#integer as {\"type\":\"NodeConstraint\",\"datatype\":\"http://www.w3.org/2001/XMLSchema#string\"}: mismatched datatype: http://www.w3.org/2001/XMLSchema#integer !== http://www.w3.org/2001/XMLSchema#string"
+}]
