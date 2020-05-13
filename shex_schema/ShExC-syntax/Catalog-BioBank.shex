@@ -1,0 +1,37 @@
+schema (ShExC)
+PREFIX ejprd:          <http://www.ejprarediseases.org/metadata#>
+PREFIX omiabis:       <http://purl.obolibrary.org/obo/>
+PREFIX xsd: <http://wwww3org/2001/XMLSchema#>
+
+
+omiabis:Catalog-BioBankShape  {
+      ejprd:recruiting  xsd:string
+      }
+
+
+
+
+#Query Map
+inst:Catalog-BioBank@omiabis:Catalog-BioBankShape
+
+
+
+
+
+#RDF data (Turtle)
+prefix ejprd:      <http://www.ejprarediseases.org/metadata#>
+prefix omiabis:   <http://purl.obolibrary.org/obo/>
+PREFIX inst: <http://inst.example/#>
+PREFIX xsd: <http://wwww3org/2001/XMLSchema#>
+
+inst:Catalog-BioBank   a  omiabis:Catalog-BioBankShape  ;
+            ejprd:recruiting  "November"^^xsd:string .
+
+#Result
+
+[{
+  "node": "http://inst.example/#Catalog-BioBank",
+  "shape": "http://purl.obolibrary.org/obo/Catalog-BioBankShape",
+  "status": "conformant",
+  "elapsed": 1
+}]
