@@ -1,0 +1,35 @@
+#Schema
+PREFIX dc: <http://purlorg/dc/elements/11/>
+PREFIX ejp: <http://purlorg/ejp-rd/vocabulary/>
+PREFIX xsd: <http://wwww3org/2001/XMLSchema#>
+
+
+ ejp:EUPIDShape {
+      dc:identifier  IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/
+      }
+
+
+
+
+
+#RDF Data
+PREFIX dc: <http://purlorg/dc/elements/11/>
+PREFIX ejp: <http://purlorg/ejp-rd/vocabulary/>
+PREFIX xsd: <http://wwww3org/2001/XMLSchema#>
+PREFIX inst: <http://inst.example/#>
+
+inst:EUPID       a ejp:EUPIDShape {
+            dc:identifier  "M23"^^xsd:string
+            }
+
+
+
+
+#Result
+
+[{
+  "node": "http://inst.example/#EUPID",
+  "shape": "http://purlorg/ejp-rd/vocabulary/EUPIDShape",
+  "status": "conformant",
+  "elapsed": 26
+}]
