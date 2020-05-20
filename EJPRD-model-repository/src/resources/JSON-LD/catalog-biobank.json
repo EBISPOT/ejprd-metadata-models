@@ -1,0 +1,1 @@
+[{"@id":"http://purl.org/ejp-rd/vocabulary/catalog-biobank"},{"@id":"http://www.w3.org/2001/XMLSchema#string"},{"@id":"https://www.ejprarediseases.org/metadata/","@type":["http://purl.org/ejp-rd/vocabulary/catalog-biobank"],"https://www.ejprarediseases.org/metadata/core#recruiting":[{"@id":"http://www.w3.org/2001/XMLSchema#string"}]}]

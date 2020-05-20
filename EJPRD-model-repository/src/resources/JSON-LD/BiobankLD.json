@@ -1,0 +1,15 @@
+[{"@id":"http://purl.org/ejp-rd/vocabulary/BioBank"},
+  {"@id":"http://www.w3.org/2001/XMLSchema#anyURI"},
+  {"@id":"http://www.w3.org/2001/XMLSchema#string"},
+  {"@id":"https://www.ejprarediseases.org/metadata/",
+  "@type":["http://purl.org/ejp-rd/vocabulary/BioBank"],
+  "http://purl.org/dc/elements/1.1/identifier":
+  [{"@id":"http://www.w3.org/2001/XMLSchema#anyURI"}],
+  "https://www.ejprarediseases.org/metadata/core#hostInstituition":
+  [{"@id":"http://www.w3.org/2001/XMLSchema#string"}],
+  "http://semanticscience.org/resource/name":
+  [{"@id":"http://www.w3.org/2001/XMLSchema#string"}],
+  "http://semanticscience.org/resource/city":
+  [{"@id":"http://www.w3.org/2001/XMLSchema#string"}],
+  "http://semanticscience.org/resource/country":
+  [{"@id":"http://www.w3.org/2001/XMLSchema#string"}]}]
