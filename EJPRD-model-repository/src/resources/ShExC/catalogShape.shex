@@ -1,53 +1,51 @@
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dct: <http://purl.org/dc/terms/>
-PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX ejp-s: <http://purl.org/ejp-rd/vocabulary/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX sio: <http://semanticscience.org/resource/>
-PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX sio: <http://semanticscience.org/resource/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
-PREFIX obo:   <http://purl.obolibrary.org/obo/>
-PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
-PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX ejp: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX  dc: <http://purl.org/dc/elements/1.1/>
+PREFIX  dcat: <http://www.w3.org/ns/dcat#>
+PREFIX  dct: <http://purl.org/dc/terms/>
+PREFIX  ejp: <http://purl.org/ejp-rd/vocabulary/>
+PREFIX  owl: <http://www.w3.org/2002/07/owl#>
+PREFIX  rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX  xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  sio: <http://semanticscience.org/resource/>
+PREFIX  ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX  obo: <http://purl.obolibrary.org/obo/>
+PREFIX  efo: <http://www.ebi.ac.uk/efo/>
 
 
-ejp:CatalogShape {
+
+ejp-s:catalogShape {
     dc:identifier  xsd:string ;
-    dcterms:alternativename xsd:string ;
-    sio:name xsd:string ;
+    dcterms:alternativeSIO_000116 xsd:string ;
+    sio:SIO_000116 xsd:string ;
     sio:description xsd:string ;
-    ejprd:about @ejprd:codeShape ;
-    obo:location @obo:organisationShape
+    ejp:about @ejp-s:codeShape ;
+    obo:location @ejp-s:organisationShape
     }
 
-ejprd:codeShape{
-    ejprd:id xsd:string ;
-    sio:url xsd:string ;
+ejp-s:codeShape{
+    ejp:id xsd:string ;
+    sio:SIO_000811 xsd:string ;
     rdfs:label xsd:string ;
-    ejprd:descritpiton xsd:string
+    ejp:descritpiton xsd:string
     }
 
-obo:organisationShape {
-    obo:name xsd:string ;
-    obo:facility xsd:string ;
-    obo:department xsd:string ;
-    sio:address @obo:locationShape
+ejp-s:organisationShape {
+    obo:SIO_000116 xsd:string ;
+    obo:NCIT_C62574 xsd:string ;
+    obo:OMIABIS_0000017 xsd:string ;
+    sio:SIO_000172 @ejp-s:locationShape
     }
 
-obo:locationShape {
+ejp-s:locationShape {
     sio:street xsd:string;
-    sio:city xsd:string ;
+    sio:SIO_000665 xsd:string ;
     obo:code xsd:string ;
-    sio:country xsd:string
+    sio:SIO_000664 xsd:string
     }

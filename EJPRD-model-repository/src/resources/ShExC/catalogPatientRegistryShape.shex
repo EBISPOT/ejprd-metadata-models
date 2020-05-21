@@ -1,80 +1,85 @@
-PREFIX ejprd:          <http://www.ejprarediseases.org/metadata#>
-PREFIX omiabis:       <http://purl.obolibrary.org/obo/>
-PREFIX xsd: <http://wwww3org/2001/XMLSchema#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
+PREFIX ejp-s: <http://purl.org/ejp-rd/vocabulary/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX sio: <http://semanticscience.org/resource/>
-PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX ejp: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX  dc: <http://purl.org/dc/elements/1.1/>
+PREFIX  dcat: <http://www.w3.org/ns/dcat#>
 PREFIX  dct: <http://purl.org/dc/terms/>
+PREFIX  ejp: <http://purl.org/ejp-rd/vocabulary/>
 PREFIX  owl: <http://www.w3.org/2002/07/owl#>
 PREFIX  rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX  xml: <http://www.w3.org/XML/1998/namespace>
 PREFIX  xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  sio: <http://semanticscience.org/resource/>
+PREFIX  ejprd: <https://www.ejprarediseases.org/metadata/core#>
 PREFIX  obo: <http://purl.obolibrary.org/obo/>
+PREFIX  efo: <http://www.ebi.ac.uk/efo/>
 
-ejprd:Catalog-PatientRegistryShape{
+
+
+ejp-s:catalogPatientRegistryShape{
     sio:studyDesign        @obo:studyDesighnShape;
-    ejprd:hasBioBank       xsd:boolean        ;
-    ejprd:inBioBank        @ejp:BioBankShape
+    ejp:hasBioBank       xsd:boolean        ;
+    ejp:inBioBank        @ejp-s:bioBankShape
 }
 
 
-ejp:BioBankShape {
+ejp-s:bioBankShape {
     dc:identifier IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/ ;
-    ejprd:hostinstitution xsd:string;
-    sio:name xsd:string ;
-    sio:city xsd:string ;
-    sio:country xsd:string
+    ejp:hostinstitution xsd:string;
+    sio:SIO_000116 xsd:string ;
+    sio:SIO_000665 xsd:string ;
+    sio:SIO_000664 xsd:string
 }
 
 
 
-obo:studydesignShape {
-                      ejprd:recruitmentEndDate          @ejp:dateTimeShape;
-                      ejprd:recruitmentArea             @obo:locationShape;
+ejp-s:studydesignShape {
+                      ejp:recruitmentEndDate          @ejp-s:dateTimeShape;
+                      ejp:recruitmentArea             @ejp-s:locationShape;
                       obo:inclusionexclusionCriteria    xsd:string;
-                      ejprd:recruitmentStartDate        @ejp:dateTimeShape;
-                      ejprd:additionalProperties        @ejp:propertyValueShape;
-                      ejprd:ethicalReviewCommitte       xsd:string;
-                      ejprd:privacyPolicy               xsd:string;
-                      obo:dataSource                    @ejprd:codeShape;
-                      ejprd:availableForFutureCollaboration  xsd:string;
-                      ejprd:numberOfCases               xsd:integer;
-                      ejprd:additionalProperties         xsd:boolean
+                      ejp:recruitmentStartDate        @ejp-s:dateTimeShape;
+                      ejp:additionalProperties        @ejp-s:propertyvalueShape;
+                      ejp:ethicalReviewCommitte       xsd:string;
+                      ejp:privacyPolicy               xsd:string;
+                      obo:dataSource                    @ejp-s:codeShape;
+                      ejp:availableForFutureCollaboration  xsd:string;
+                      ejp:numberOfCases               xsd:integer;
+                      ejp:additionalProperties         xsd:boolean
                       }
 
 
 
-ejp:dateTimeShape {
-                     sio:day xsd:gDay;
-                     sio:month xsd:gMonth;
-                     sio:year xsd:gYear;
-                     sio:timeinstant xsd:time
+ejp-s:dateTimeShape {
+                     sio:SIO_000430 xsd:gDay;
+                     sio:SIO_000429 xsd:gMonth;
+                     sio:SIO_000428 xsd:gYear;
+                     sio:SIO_000418 xsd:time
                       }
 
 
 
-obo:locationShape {
+ejp-s:locationShape {
                     sio:street xsd:string;
-                    sio:city xsd:string ;
+                    sio:SIO_000665 xsd:string ;
                     obo:code xsd:string ;
-                    sio:country xsd:string
+                    sio:SIO_000664 xsd:string
                     }
 
 
-ejp:propertyValueShape {
-                        sio:name xsd:string ;
-                        obo:value xsd:string ;
-                        ejprd:code @ejprd:codeShape
+ejp-s:propertyValueShape {
+                        sio:SIO_000116 xsd:string ;
+                        obo:NCIT_C25712 xsd:string ;
+                        ejp:code @ejp-s:codeShape
                         }
 
 
-ejprd:codeShape {
-                 ejprd:id xsd:string  ;
-                 sio:url xsd:string ;
+ejp-s:codeShape {
+                 ejp:id xsd:string  ;
+                 sio:SIO_000811 xsd:string ;
                  rdfs:label xsd:string ;
-                 ejprd:descritpiton xsd:string
+                 ejp:descritpiton xsd:string
                  }

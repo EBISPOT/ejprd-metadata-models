@@ -2,16 +2,17 @@
 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sio: <http://semanticscience.org/resource/>
-PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX ejp-s: <http://purl.org/ejp-rd/vocabulary/>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-ejprd:codeShape {
-    ejprd:id xsd:string  ;
-    sio:url xsd:string ;
+
+ejp-s:codeShape {
+    ejp:id xsd:string  ;
+    sio:SIO_000811 xsd:string ;
     rdfs:label xsd:string ;
-    ejprd:descritpiton xsd:string
+    ejp:descritpiton xsd:string
 
 }
