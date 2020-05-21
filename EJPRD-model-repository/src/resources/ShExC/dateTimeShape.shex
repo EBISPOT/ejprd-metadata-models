@@ -1,0 +1,11 @@
+PREFIX ejp: <http://purlorg/ejp-rd/vocabulary/>
+PREFIX sio: <http://semanticscienceorg/resource/>
+PREFIX ejprd: <https://wwwejprarediseasesorg/metadata/core#>
+PREFIX xsd: <http://wwww3org/2001/XMLSchema#>
+
+ejp:datetimeShape {
+      sio:day xsd:gDay;
+      sio:month xsd:gMonth;
+      sio:year xsd:gYear;
+      sio:timeinstant xsd:time
+}

@@ -1,0 +1,56 @@
+{
+  "type": "Schema",
+  "shapes": [
+    {
+      "type": "Shape",
+      "id": "http://purl.org/ejp-rd/vocabulary/BioBankShape",
+      "expression": {
+        "type": "EachOf",
+        "expressions": [
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://purl.org/dc/elements/1.1/identifier",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "nodeKind": "iri",
+              "pattern": "^http://purl\\.org/dc/elements/1.1/id#[0-9]+"
+            }
+          },
+          {
+            "type": "TripleConstraint",
+            "predicate": "https://www.ejprarediseases.org/metadata/core#hostinstitution",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          },
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://semanticscience.org/resource/name",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          },
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://semanticscience.org/resource/city",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          },
+          {
+            "type": "TripleConstraint",
+            "predicate": "http://semanticscience.org/resource/country",
+            "valueExpr": {
+              "type": "NodeConstraint",
+              "datatype": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "@context": "http://www.w3.org/ns/shex.jsonld"
+}

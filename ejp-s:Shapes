@@ -1,0 +1,383 @@
+ejp-s:bioBankShape  {
+    dc:identifier IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/ ;
+    ejp:hostinstitution xsd:string;
+    sio:SIO_000116  xsd:string ;
+    sio:SIO_000665 xsd:string ;
+    sio:SIO_000664 xsd:string
+}
+
+
+
+ejp-s:BiologicalSamplePatientShape {
+      ejp:pseudonym  @ejp-s:EUPIDShape;
+      sio:SIO_001331  @ejp-s:codeShape;
+      efo:EFO_0004950 @ejp-s:dateTimeShape ;
+      ejp:dateOfDeath @ejp-s:dateTimeShape ;
+      ejp:firstContact @ejp-s:dateTimeShape ;
+      efo:EFO_0004847 @ejp-s:dateTimeShape ;
+      efo:EFO_0004918 @ejp-s:dateTimeShape ;
+      ejp:diagnosisOfRareDisease  @ejp-s:dateTimeShape ;
+      ejp:geneticDiagnosis xsd:string ;
+      ejp:undiagnosisCase xsd:string ;
+      obo:NCIT_C28421 [xsd:string @ejp-s:codeShape] ;
+      sio:SIO_001326 [xsd:string @ejp-s:codeShape] ;
+      ejp:additionalProperties @ejp-s:propertyvalueShape }
+
+
+ejp-s:EUPIDShape {
+               dc:identifier  IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/
+               }
+
+ejp-s:codeShape {
+          ejp:id xsd:string  ;
+          sio:SIO_000811 xsd:string ;
+          rdfs:label xsd:string ;
+          ejp:descritpiton @ejp-s:bioBankShape
+          }
+
+ejp-s:dateTimeShape {
+          sio:SIO_000430 xsd:gDay;
+          sio:SIO_000429 xsd:gMonth;
+          sio:SIO_000428 xsd:gYear;
+          sio:SIO_000418 xsd:time
+          }
+
+ejp-s:propertyValueShape {
+          sio:SIO_000116 xsd:string ;
+          obo:NCIT_C25712 xsd:string ;
+          ejp:code @ejp-s:codeShape
+          }
+
+ejp-s:bioBankShape {
+          dc:identifier IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/ ;
+          ejp:hostinstitution xsd:string;
+          sio:SIO_000116 xsd:string ;
+          sio:SIO_000665 xsd:string ;
+          sio:SIO_000664 xsd:string
+          }
+
+
+
+ejp-s:biologicalSampleShape {
+                dc:identifier  xsd:string ;
+                sio:SIO_000116 xsd:string ;
+                sio:description xsd:string ;
+                ejp:inCatalog @ejp:catalogShape ;
+                ejp:characteristics @ejp-s:propertyvalueShape
+                }
+
+ejp-s:catalogShape{
+                dc:identifier  xsd:string ;
+                dcterms:alternativeSIO_000116 xsd:string ;
+                sio:SIO_000116 xsd:string ;
+                sio:description xsd:string ;
+                ejp:about  @ejp-s:codeShape ;
+                obo:location @ejp-s:organisationShape
+                }
+
+ejp-s:codeShape {
+              ejp:id xsd:string ;
+              sio:SIO_000811 xsd:string ;
+              rdfs:label xsd:string ;
+              ejp:descritpiton @ejp-s:bioBankShape
+              }
+
+ejp-s:bioBankShape {
+                  dc:identifier IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/ ;
+                  ejp:hostinstitution xsd:string;
+                  sio:SIO_000116 xsd:string ;
+                  sio:SIO_000665 xsd:string ;
+                  sio:SIO_000664 xsd:string
+              }
+
+ejp-s:organisationShape{
+              obo:SIO_000116 xsd:string ;
+              obo:NCIT_C62574 xsd:string ;
+              obo:OMIABIS_0000017 xsd:string ;
+              sio:SIO_000172 @ejp-s:locationShape
+}
+
+ejp-s:locationShape {
+              sio:SIO_000665 xsd:string ;
+              obo:code xsd:string ;
+              sio:SIO_000664 xsd:string
+              }
+
+
+
+ejp-s:propertyvalueShape {
+              sio:SIO_000116 xsd:string ;
+              obo:NCIT_C25712 xsd:string ;
+              ejp:code ejp:code
+}
+
+
+
+ejp-s:catalog-BioBankShape  {
+      ejp:recruiting  xsd:string
+      }
+
+
+ejp:catalog-biobank{
+        ejp:recruiting xsd:string }
+
+
+
+
+
+ejp-s:catalogPatientRegistryShape{
+    sio:studyDesign        @obo:studyDesighnShape;
+    ejp:hasBioBank       xsd:boolean        ;
+    ejp:inBioBank        @ejp-s:bioBankShape
+}
+
+
+ejp-s:bioBankShape {
+    dc:identifier IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/ ;
+    ejp:hostinstitution xsd:string;
+    sio:SIO_000116 xsd:string ;
+    sio:SIO_000665 xsd:string ;
+    sio:SIO_000664 xsd:string
+}
+
+
+
+ejp-s:studydesignShape {
+                      ejp:recruitmentEndDate          @ejp-s:dateTimeShape;
+                      ejp:recruitmentArea             @ejp-s:locationShape;
+                      obo:inclusionexclusionCriteria    xsd:string;
+                      ejp:recruitmentStartDate        @ejp-s:dateTimeShape;
+                      ejp:additionalProperties        @ejp-s:propertyvalueShape;
+                      ejp:ethicalReviewCommitte       xsd:string;
+                      ejp:privacyPolicy               xsd:string;
+                      obo:dataSource                    @ejp-s:codeShape;
+                      ejp:availableForFutureCollaboration  xsd:string;
+                      ejp:numberOfCases               xsd:integer;
+                      ejp:additionalProperties         xsd:boolean
+                      }
+
+
+
+ejp-s:dateTimeShape {
+                     sio:SIO_000430 xsd:gDay;
+                     sio:SIO_000429 xsd:gMonth;
+                     sio:SIO_000428 xsd:gYear;
+                     sio:SIO_000418 xsd:time
+                      }
+
+
+
+ejp-s:locationShape {
+                    sio:street xsd:string;
+                    sio:SIO_000665 xsd:string ;
+                    obo:code xsd:string ;
+                    sio:SIO_000664 xsd:string
+                    }
+
+
+ejp-s:propertyValueShape {
+                        sio:SIO_000116 xsd:string ;
+                        obo:NCIT_C25712 xsd:string ;
+                        ejp:code @ejp-s:codeShape
+                        }
+
+
+ejp-s:codeShape {
+                 ejp:id xsd:string  ;
+                 sio:SIO_000811 xsd:string ;
+                 rdfs:label xsd:string ;
+                 ejp:descritpiton xsd:string
+                 }
+
+
+ejp-s:catalogShape {
+    dc:identifier  xsd:string ;
+    dcterms:alternativeSIO_000116 xsd:string ;
+    sio:SIO_000116 xsd:string ;
+    sio:description xsd:string ;
+    ejp:about @ejp-s:codeShape ;
+    obo:location @ejp-s:organisationShape
+    }
+
+ejp-s:codeShape{
+    ejp:id xsd:string ;
+    sio:SIO_000811 xsd:string ;
+    rdfs:label xsd:string ;
+    ejp:descritpiton xsd:string
+    }
+
+ejp-s:organisationShape {
+    obo:SIO_000116 xsd:string ;
+    obo:NCIT_C62574 xsd:string ;
+    obo:OMIABIS_0000017 xsd:string ;
+    sio:SIO_000172 @ejp-s:locationShape
+    }
+
+ejp-s:locationShape {
+    sio:street xsd:string;
+    sio:SIO_000665 xsd:string ;
+    obo:code xsd:string ;
+    sio:SIO_000664 xsd:string
+    }
+
+
+ejp-s:codeShape {
+    ejp:id xsd:string  ;
+    sio:SIO_000811 xsd:string ;
+    rdfs:label xsd:string ;
+    ejp:descritpiton xsd:string
+
+}
+
+
+
+ejp-s:codingSystemShape{
+      ejp:id  xsd:string ;
+      sio:SIO_000811 xsd:string ;
+      rdfs:label xsd:string ;
+      ejp:descritpiton @ejp-s:bioBankShape
+}
+
+
+ejp-s:bioBankShape {
+  dc:identifier IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/ ;
+  ejp:hostinstitution xsd:string;
+  sio:SIO_000116 xsd:string ;
+  sio:SIO_000665 xsd:string ;
+  sio:SIO_000664 xsd:string
+      }
+
+ejp-s:dateTimeShape {
+      sio:SIO_000430 xsd:gDay;
+      sio:SIO_000429 xsd:gMonth;
+      sio:SIO_000428 xsd:gYear;
+      sio:SIO_000418 xsd:time
+}
+
+
+
+<ejp:CatalogOfRegistries> {               # A CatalogOfRegistries shape
+
+dcat:dataset  @<ejp:PatientRegistryDataset>;
+dct:publisher @<ejp:organisation>
+
+}
+
+
+<PatientRegistryDataset> {                  # Patient registry dataset shape
+
+dcat:theme @<ejp:DiseaseCode>;            # Disease code shape
+dct:publisher @<organisation>;              # Organisation shape
+ejp:populationCoverage @<ejp:location>  # Location shape
+
+}
+
+
+<ejp:DiseaseCode>{
+
+skos:inConceptSchema @<ejp:DiseaseCodeSystem> # Disease code system shape
+
+
+}
+
+<ejp:organisation>{                       # Organisation shape
+
+
+}
+
+<ejp:DiseaseCodeSystem>{                  # Disease code system shape
+
+
+}
+
+
+
+ ejp-s:EUPIDShape {
+      dc:identifier  IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/
+      }
+
+
+ejp-s:locationShape {
+                  sio:street xsd:string;
+                  sio:SIO_000665 xsd:string ;
+                  obo:code xsd:string ;
+                  sio:SIO_000664 xsd:string
+                  }
+
+
+
+ejp-s:organisationShape {
+          obo:SIO_000116 xsd:string ;
+          obo:NCIT_C62574 xsd:string ;
+          obo:OMIABIS_0000017 xsd:string ;
+          sio:SIO_000172 @ejp-s:locationShape
+          }
+
+ejp-s:locationShape {
+          sio:SIO_000665 xsd:string ;
+          obo:code xsd:string ;
+          sio:SIO_000664 xsd:string
+          }
+
+ejp-s:propertyValueShape {
+    sio:SIO_000116 xsd:string ;
+    obo:NCIT_C25712 xsd:string ;
+    ejp:code @ejp-s:codeShape
+    }
+
+
+ejp-s:codeShape {
+   ejp:id xsd:string  ;
+   sio:SIO_000811 xsd:string ;
+   rdfs:label xsd:string ;
+   ejp:descritpiton xsd:string
+   }
+
+
+
+ejp-s:studydesignShape {
+                      ejp:recruitmentEndDate          @ejp-s:dateTimeShape;
+                      ejp:recruitmentArea             @ejp-s:locationShape;
+                      obo:inclusionexclusionCriteria    xsd:string;
+                      ejp:recruitmentStartDate        @ejp-s:dateTimeShape;
+                      ejp:additionalProperties        @ejp-s:propertyvalueShape;
+                      ejp:ethicalReviewCommitte       xsd:string;
+                      ejp:privacyPolicy               xsd:string;
+                      obo:dataSource                    @ejp-s:codeShape;
+                      ejp:availableForFutureCollaboration  xsd:string;
+                      ejp:numberOfCases               xsd:integer;
+                      ejp:additionalProperties        xsd:boolean
+                      }
+
+
+
+ejp-s:dateTimeShape {
+                     sio:SIO_000430 xsd:gDay;
+                     sio:SIO_000429 xsd:gMonth;
+                     sio:SIO_000428 xsd:gYear;
+                     sio:SIO_000418 xsd:time
+                      }
+
+
+
+ejp-s:locationShape {
+                    sio:street xsd:string;
+                    sio:SIO_000665 xsd:string ;
+                    obo:code xsd:string ;
+                    sio:SIO_000664 xsd:string
+                    }
+
+
+ejp-s:propertyValueShape {
+                        sio:SIO_000116 xsd:string ;
+                        obo:NCIT_C25712 xsd:string ;
+                        ejp:code @ejp-s:codeShape
+                        }
+
+
+ejp-s:codeShape {
+                 ejp:id xsd:string  ;
+                 sio:SIO_000811 xsd:string ;
+                 rdfs:label xsd:string ;
+                 ejp:descritpiton xsd:string
+                 }

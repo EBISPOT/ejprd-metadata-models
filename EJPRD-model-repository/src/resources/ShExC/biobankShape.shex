@@ -1,0 +1,16 @@
+#ShExC BioBank
+
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
+PREFIX ejp-s: <http://purl.org/ejp-rd/metadata/shapes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+
+
+ejp-s:bioBankShape  IRI {
+    dc:identifier IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/ ;
+    ejp:hostinstitution xsd:string;
+    sio:SIO_000116  xsd:string ;
+    sio:SIO_000665 xsd:string ;
+    sio:SIO_000664 xsd:string
+}

@@ -1,0 +1,6 @@
+PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/> 
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ejp:catalog-biobank{
+        ejprd:recruiting xsd:string }

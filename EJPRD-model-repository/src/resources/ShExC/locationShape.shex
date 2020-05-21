@@ -1,0 +1,15 @@
+#ShExC Schema
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX sio: <http://semanticscience.org/resource/>
+
+
+
+obo:locationShape {
+                  sio:street xsd:string;
+                  sio:city xsd:string ;
+                  obo:code xsd:string ;
+                  sio:country xsd:string
+                  }

@@ -1,0 +1,17 @@
+#schema (ShExC)
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ejprd:codeShape {
+    ejprd:id xsd:string  ;
+    sio:url xsd:string ;
+    rdfs:label xsd:string ;
+    ejprd:descritpiton xsd:string
+
+}

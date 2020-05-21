@@ -1,0 +1,41 @@
+PREFIX dc:           <http://purl.org/dc/elements/1.1/>
+PREFIX dcat:         <http://www.w3.org/ns/dcat#>
+PREFIX dct:           <http://purl.org.dc/terms/>
+PREFIX ejprd:        <http://www.ejprarediseases.org/metadata#>
+PREFIX skos:         <http://www.w3.org/2004/02/skos/core#>
+
+
+
+<ejprd:CatalogOfRegistries> {               # A CatalogOfRegistries shape
+
+dcat:dataset  @<ejprd:PatientRegistryDataset>;
+dct:publisher @<ejprd:organisation>
+
+}
+
+
+<PatientRegistryDataset> {                  # Patient registry dataset shape
+
+dcat:theme @<ejprd:DiseaseCode>;            # Disease code shape
+dct:publisher @<organisation>;              # Organisation shape
+ejprd:populationCoverage @<ejprd:location>  # Location shape
+
+}
+
+
+<ejprd:DiseaseCode>{
+
+skos:inConceptSchema @<ejprd:DiseaseCodeSystem> # Disease code system shape
+
+
+}
+
+<ejprd:organisation>{                       # Organisation shape
+
+
+}
+
+<ejprd:DiseaseCodeSystem>{                  # Disease code system shape
+
+
+}

@@ -1,0 +1,18 @@
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX obo:   <http://purl.obolibrary.org/obo/>
+
+
+obo:organisationShape {
+          obo:name xsd:string ;
+          obo:facility xsd:string ;
+          obo:department xsd:string ;
+          sio:address @obo:locationShape
+          }
+
+obo:locationShape {
+          sio:city xsd:string ;
+          obo:code xsd:string ;
+          sio:country xsd:string
+          }
