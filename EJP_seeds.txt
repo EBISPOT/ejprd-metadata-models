@@ -38,6 +38,8 @@ department http://purl.obolibrary.org/obo/OMIABIS_0000017
 address http://semanticscience.org/resource/SIO_000172
 value http://purl.obolibrary.org/obo/NCIT_C25712
 
+systolic blood pressure http://www.ebi.ac.uk/efo/EFO_0006335
+cystolic-pressure-measurement
 
 
 ejp: <http://purl.org/ejp-rd/vocabulary/>

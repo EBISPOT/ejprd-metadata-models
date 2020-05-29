@@ -3,15 +3,15 @@
     <http://www.w3.org/ns/ldp#RDFResource> .
 
 <https://directory.bbmri-eric.eu//api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:DE_ASK-Tx:collection:all_samples> a <http://purl.org/ejp-rd/vocabulary/BiobankDataset>;
-  <http://purl.org/dc/terms/title> "Main collection of Asklepios Biobank für Lungenerkrankungen";
-  <http://purl.org/dc/terms/publisher> [
-    <http://purl.org/dc/terms/title> "Asklepios Biobank für Lungenerkrankungen";
-    <http://purl.org/dc/terms/spatial> [
-      <http://www.w3.org/ns/dcat#country-name> "DE";
-      <http://www.w3.org/ns/dcat#locality> ""
+<http://purl.org/dc/terms/title> "Main collection of Asklepios Biobank für Lungenerkrankungen";
+<http://purl.org/dc/terms/publisher> [
+<http://purl.org/dc/terms/title> "Asklepios Biobank für Lungenerkrankungen";
+<http://purl.org/dc/terms/spatial> [
+<http://www.w3.org/ns/dcat#country-name> "DE";
+<http://www.w3.org/ns/dcat#locality> ""
     ]
   ];
-  <http://www.w3.org/ns/dcat#theme> <http://identifiers.org/icd/C37>,
+<http://www.w3.org/ns/dcat#theme> <http://identifiers.org/icd/C37>,
     <http://identifiers.org/icd/C78>,
     <http://identifiers.org/icd/Q85>,
     <http://identifiers.org/icd/J98>,
@@ -22,3 +22,9 @@
     <http://identifiers.org/icd/D21>,
     <http://identifiers.org/icd/D36>,
     <http://identifiers.org/icd/C45> .
+
+
+
+
+
+<http://purl.org/ejp-rd/ejp-rd/vocabulary/>
