@@ -11,14 +11,3 @@
       <http://www.w3.org/ns/dcat#locality> ""
     ]
   ] .
-
-
-  <https://directory.bbmri-eric.eu//api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:DE_BMBN:collection:Main_collection> a <http://purl.org/ejp-rd/vocabulary/BiobankDataset>;
-    <http://purl.org/dc/terms/title> "Main Collection of the BioMaterial Bank Nord";
-    <http://purl.org/dc/terms/publisher> [
-      <http://purl.org/dc/terms/title> "BioMaterialBank Nord";
-      <http://purl.org/dc/terms/spatial> [
-        <http://www.w3.org/ns/dcat#country-name> "DE";
-        <http://www.w3.org/ns/dcat#locality> ""
-      ]
-    ] .
