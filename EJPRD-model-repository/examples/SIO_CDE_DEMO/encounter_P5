@@ -1,0 +1,59 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5>
+    a <http://www.w3.org/2000/01/rdf-schema#Resource>, <http://www.w3.org/ns/ldp#Resource> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#measVal_2612d981-9ff9-4503-9193-4b3fb8d0bbe5>
+    <http://semanticscience.org/resource/has-value> "Duchenne muscular dystrophy"@en ;
+    a <http://www.orpha.net/ORDO/Orphanet_98896> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Duchenne muscular dystrophy=Duchenne muscular dystrophy"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#person_86ae245f-df41-46ee-abea-9facf6fdc6c0>
+    <http://purl.obolibrary.org/obo/RO_0002162> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#taxon_1859fc1b-e758-466c-91c1-3d3d05a896a9> ;
+    <http://semanticscience.org/resource/has-attribute> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#measVal_2612d981-9ff9-4503-9193-4b3fb8d0bbe5> ;
+    <http://semanticscience.org/resource/has-identifier> <urn:eupid:europe.eu:eupid00200> ;
+    <http://semanticscience.org/resource/has-role> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#role_2ec964ea-573c-4781-93f6-c722d7a521a5> ;
+    a <https://schema.org/Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "eupid: urn:eupid:europe.eu:eupid00200"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#process>
+    <http://semanticscience.org/resource/has-output> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#measVal_2612d981-9ff9-4503-9193-4b3fb8d0bbe5> ;
+    <http://semanticscience.org/resource/is-preceded-by> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P3#process>, <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P4#process> ;
+    <http://semanticscience.org/resource/start-time> "2020-02-03"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    a <http://ejprd-ontology.org/ejp/duchenne-diagnosis-process> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "duchenne diagnosis process"@en ;
+    <http://www.w3.org/ns/prov#wasInformedBy> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P3#process>, <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P4#process> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#role_2ec964ea-573c-4781-93f6-c722d7a521a5>
+    <http://semanticscience.org/resource/is-realized-in> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#process> ;
+    a <http://purl.obolibrary.org/obo/OBI_0000207> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Health Care Provider Role"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#roleidentifier_f9cb1247-59d2-4653-adaa-caa83117c49a>
+    <http://purl.org/dc/terms/identifier> "HOSP:Dr_MD_123"@en ;
+    <http://semanticscience.org/resource/denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#role_2ec964ea-573c-4781-93f6-c722d7a521a5> ;
+    a <http://identifiers.org/uniqueids/MedicalProfessionals> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Medical Professional Identifier HOSP:Dr_MD_123"@en ;
+    <https://purl.obolibrary.org/obo/iao.owl#denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#role_2ec964ea-573c-4781-93f6-c722d7a521a5> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P5#taxon_1859fc1b-e758-466c-91c1-3d3d05a896a9>
+    a <http://purl.uniprot.org/taxonomy/9606> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homo sapiens"@en .
+
+<http://identifiers.org/uniqueids/MedicalProfessionals>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Medical Professional Identifier"@en .
+
+<http://purl.obolibrary.org/obo/OBI_0000207>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Health Care Provider Role"@en .
+
+<http://purl.uniprot.org/taxonomy/9606>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homo sapiens"@en .
+
+<http://www.orpha.net/ORDO/Orphanet_98896>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Duchenne muscular dystrophy=Duchenne muscular dystrophy"@en .
+
+<urn:eupid:europe.eu:eupid00200>
+    <http://purl.org/dc/terms/identifier> "urn:eupid:europe.eu:eupid00200"@en ;
+    a <https://ejp-ontology.eu/terms/EUPID> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "urn:eupid:europe.eu:eupid00200"@en .
+

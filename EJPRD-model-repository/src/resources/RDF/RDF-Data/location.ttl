@@ -1,0 +1,16 @@
+
+# The RDF graph data
+
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX inst: <http://inst.example/#>
+
+
+inst:location a obo:location ;
+                  sio:street "33 boulevard de Picpus";
+                  sio:city "Milan";
+                  obo:code "M123" ;
+                  sio:country "Spain" .

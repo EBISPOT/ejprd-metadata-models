@@ -1,0 +1,13 @@
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8080/dataset/bbmri-eric:ID:IT_1383731606990988:collection:1444717473503863> a <http://www.w3.org/ns/ldp#Resource>,
+    <http://www.w3.org/ns/ldp#RDFResource> .
+
+<https://directory.bbmri-eric.eu//api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:IT_1383731606990988:collection:1444717473503863> a <http://purl.org/ejp-rd/vocabulary/BiobankDataset>;
+  <http://purl.org/dc/terms/title> "Collection all Samples";
+  <http://purl.org/dc/terms/publisher> [
+    <http://purl.org/dc/terms/title> "Tumor Skeletal Tumor Biobank";
+    <http://purl.org/dc/terms/spatial> [
+      <http://www.w3.org/ns/dcat#country-name> "IT";
+      <http://www.w3.org/ns/dcat#locality> ""
+    ]
+  ] .

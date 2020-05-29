@@ -1,0 +1,19 @@
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8080/dataset/bbmri-eric:ID:DE_BMBH:collection:Lungenbiobank> a <http://www.w3.org/ns/ldp#Resource>,
+    <http://www.w3.org/ns/ldp#RDFResource> .
+
+<https://directory.bbmri-eric.eu//api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:DE_BMBH:collection:Lungenbiobank> a <http://purl.org/ejp-rd/vocabulary/BiobankDataset>;
+  <http://purl.org/dc/terms/title> "Lungenbiobank Heidelberg";
+  <http://purl.org/dc/terms/publisher> [
+    <http://purl.org/dc/terms/title> "BioMaterialBank Heidelberg";
+    <http://purl.org/dc/terms/spatial> [
+      <http://www.w3.org/ns/dcat#country-name> "DE";
+      <http://www.w3.org/ns/dcat#locality> ""
+    ]
+  ];
+  <http://www.w3.org/ns/dcat#theme> <http://identifiers.org/icd/C78>,
+    <http://identifiers.org/icd/C33>,
+    <http://identifiers.org/icd/C34>,
+    <http://identifiers.org/icd/C45>,
+    <http://identifiers.org/icd/J00-J06>,
+    <http://identifiers.org/icd/C38> .

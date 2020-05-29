@@ -1,0 +1,15 @@
+#RDF data
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
+PREFIX ex: <http://ex.example/#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX inst: <http://inst.example/#>
+
+inst:code a ejprd:code;
+        ejprd:id  "23" ;
+        sio:url  "http://semanticscience.org/resource/url" ;
+        rdfs:label "RD Biobank" ;
+        ejprd:descritpiton  "Rare Demo Institution" .

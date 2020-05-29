@@ -1,0 +1,18 @@
+#The RDF graph data
+
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ejp: <http://purl.org/ejp-rd/vocabulary/>
+PREFIX ex: <http://ex.example/#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX ex: <http://inst.example/#>
+
+
+
+ex:BioBank a ejp-s:bioBankShape;
+    dc:identifier <http://purl.org/dc/elements/1.1/id#23> ;
+    ejp:hostinstitution "Rare Demo Institution";
+    sio:SIO_000116  "RD Biobank" ;
+    sio:SIO_000665 "Milan" ;
+    sio:SIO_000664 "SPAIN" .

@@ -11,3 +11,54 @@ status descriptor ^ http://semanticscience.org/resource/SIO_001326
 Date of Death ^ http://purl.obolibrary.org/obo/NCIT_C70810
 age at onset ^  http://www.ebi.ac.uk/efo/EFO_0004847
 age at diagnosis ^ http://www.ebi.ac.uk/efo/EFO_0004918
+BioBank: http://purl.obolibrary.org/obo/OMIABIS_0000000
+Identifier: http://purl.org/dc/elements/1.1/identifier
+hostinstitution:
+Female http://purl.obolibrary.org/obo/PATO_0000383
+Male http://purl.obolibrary.org/obo/PATO_0000384
+Hermaphrodite	 http://purl.obolibrary.org/obo/PATO_0001340
+Pseudohermaphrodite http://purl.obolibrary.org/obo/PATO_0001827
+name  http://semanticscience.org/resource/SIO_000116
+city http://semanticscience.org/resource/SIO_000665
+country http://semanticscience.org/resource/SIO_000664
+pseudonym http://purl.obolibrary.org/obo/NCIT_C80244
+diagnosis  http://semanticscience.org/resource/SIO_001331
+dateOfBirth http://www.ebi.ac.uk/efo/EFO_0004950
+ageAtOnset http://www.ebi.ac.uk/efo/EFO_0004847
+ageAtDiagnosis http://www.ebi.ac.uk/efo/EFO_0004918
+sex http://purl.obolibrary.org/obo/
+statusDescriptor http://semanticscience.org/resource/SIO_001326
+url http://semanticscience.org/resource/SIO_000811
+day http://semanticscience.org/resource/SIO_000430
+month http://semanticscience.org/resource/SIO_000429
+year http://semanticscience.org/resource/SIO_000428
+time instant http://semanticscience.org/resource/SIO_000418
+facility http://purl.obolibrary.org/obo/NCIT_C62574
+department http://purl.obolibrary.org/obo/OMIABIS_0000017
+address http://semanticscience.org/resource/SIO_000172
+value http://purl.obolibrary.org/obo/NCIT_C25712
+
+
+
+ejp: <http://purl.org/ejp-rd/vocabulary/>
+
+ex: <http://example.org/ns#> .
+skos: <http://www.w3.org/2004/02/skos/core#>
+@base: http://purl.org/ejp-rd/vocabulary/,
+"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+"owl": "http://www.w3.org/2002/07/owl#",
+"xsd": "http://www.w3.org/2001/XMLSchema#",
+"dct": "http://purl.org/dc/terms/",
+"dc": "http://purl.org/dc/elements/1.1/",
+"dcat": "http://www.w3.org/ns/dcat#",
+"vcard": "http://www.w3.org/ns/dcat#",
+"foaf" : "http://xmlns.com/foaf/0.1/",
+"umbel" : "http://umbel.org/umbel#",
+"id": "dc:identifier",
+"name": "dct:title",
+"city": "vcard:locality",
+"country": "vcard:country-name",
+"description": "dct:description",
+"region" : "vcard:region",
+"@id": "dcat:dataset",

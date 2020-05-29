@@ -1,0 +1,35 @@
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8080/dataset/bbmri-eric:ID:MT_MBB:collection:all_samples> a <http://www.w3.org/ns/ldp#Resource>,
+    <http://www.w3.org/ns/ldp#RDFResource> .
+
+<https://directory.bbmri-eric.eu//api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:MT_MBB:collection:all_samples> a <http://purl.org/ejp-rd/vocabulary/BiobankDataset>;
+  <http://purl.org/dc/terms/title> "Main collection of Malta BioBank, comprising of all the samples.";
+  <http://purl.org/dc/terms/publisher> [
+    <http://purl.org/dc/terms/title> "Malta BioBank";
+    <http://purl.org/dc/terms/spatial> [
+      <http://www.w3.org/ns/dcat#country-name> "MT";
+      <http://www.w3.org/ns/dcat#locality> ""
+    ]
+  ];
+  <http://www.w3.org/ns/dcat#theme> <http://identifiers.org/icd/XXII>,
+    <http://identifiers.org/icd/XIV>,
+    <http://identifiers.org/icd/XVIII>,
+    <http://identifiers.org/icd/VIII>,
+    <http://identifiers.org/icd/VII>,
+    <http://identifiers.org/icd/VI>,
+    <http://identifiers.org/icd/XI>,
+    <http://identifiers.org/icd/XX>,
+    <http://identifiers.org/icd/II>,
+    <http://identifiers.org/icd/XXI>,
+    <http://identifiers.org/icd/IX>,
+    <http://identifiers.org/icd/XIX>,
+    <http://identifiers.org/icd/IV>,
+    <http://identifiers.org/icd/III>,
+    <http://identifiers.org/icd/XII>,
+    <http://identifiers.org/icd/XVII>,
+    <http://identifiers.org/icd/XV>,
+    <http://identifiers.org/icd/X>,
+    <http://identifiers.org/icd/XVI>,
+    <http://identifiers.org/icd/V>,
+    <http://identifiers.org/icd/XIII>,
+    <http://identifiers.org/icd/I> .

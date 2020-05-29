@@ -1,0 +1,21 @@
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/PatientRegistryDataset_Orphanet_125532.ttl> a <http://www.w3.org/ns/ldp#RDFResource>,
+    <http://www.w3.org/ns/ldp#Resource>,
+    <http://purl.org/ejp-rd/vocabulary/PatientRegistryDataset>;
+  <http://purl.org/dc/terms/title> "Haemoglobinopathy Registry";
+  <http://purl.org/dc/elements/1.1/identifier> "125532";
+  <http://purl.org/dc/terms/publisher> <http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/PatientRegistryDataset_Orphanet_125532_Organisation>;
+  <http://purl.org/ejp-rd/vocabulary/populationCoverage> <http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/PatientRegistryDataset_Orphanet_125532_PopulationCoverage>;
+  <http://purl.org/ejp-rd/vocabulary/validationDate> "2018-01-18 00:00:00.0";
+  <http://www.w3.org/ns/dcat#theme> <http://www.orpha.net/ORDO/Orphanet_68364>;
+  <http://xmlns.com/foaf/0.1/page> "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=501041",
+    "https://www.monash.edu/medicine/sphpm/registries/hbr" .
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/PatientRegistryDataset_Orphanet_125532_Organisation> a <http://purl.org/ejp-rd/vocabulary/Organisation>;
+  <http://purl.org/dc/terms/spatial> <http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/PatientRegistryDataset_Orphanet_125532_Organisation_Location> .
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/PatientRegistryDataset_Orphanet_125532_Organisation_Location> a <http://purl.org/ejp-rd/vocabulary/Location>;
+  <http://purl.org/ejp-rd/vocabulary/country> "AUSTRALIA" .
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/PatientRegistryDataset_Orphanet_125532_PopulationCoverage> a <http://purl.org/ejp-rd/vocabulary/Location>;
+  <http://purl.org/ejp-rd/vocabulary/country> "National" .

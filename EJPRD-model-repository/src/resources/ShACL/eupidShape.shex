@@ -1,0 +1,10 @@
+#ShExC
+
+PREFIX dc: <http://purlorg/dc/elements/11/>
+PREFIX ejp-s: <http://purlorg/ejp-rd/vocabulary/>
+PREFIX xsd: <http://wwww3org/2001/XMLSchema#>
+PREFIX ejp-s: <http://purlorg/ejp-rd/vocabulary/>
+
+ ejp-s:EUPIDShape {
+      dc:identifier  IRI /^http:\/\/purl\.org\/dc\/elements\/1.1\/id#[0-9]+/
+      }

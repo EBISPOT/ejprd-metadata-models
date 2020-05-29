@@ -1,0 +1,21 @@
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_66246.ttl> a <http://www.w3.org/ns/ldp#RDFResource>,
+    <http://www.w3.org/ns/ldp#Resource>,
+    <http://purl.org/ejp-rd/vocabulary/BiobankDataset>;
+  <http://purl.org/dc/terms/title> "eurIPFbank: European idiopathic pulmonary fibrosis biobank";
+  <http://purl.org/dc/elements/1.1/identifier> "66246";
+  <http://purl.org/dc/terms/publisher> <http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_66246_Organisation>;
+  <http://purl.org/ejp-rd/vocabulary/populationCoverage> <http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_66246_PopulationCoverage>;
+  <http://purl.org/ejp-rd/vocabulary/validationDate> "2018-06-13 00:00:00.0";
+  <http://www.w3.org/ns/dcat#theme> <http://www.orpha.net/ORDO/Orphanet_98300>;
+  <http://xmlns.com/foaf/0.1/page> "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=203357",
+    "http://www.pulmonary-fibrosis.net/" .
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_66246_Organisation> a <http://purl.org/ejp-rd/vocabulary/Organisation>;
+  <http://purl.org/dc/terms/spatial> <http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_66246_Organisation_Location> .
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_66246_Organisation_Location> a <http://purl.org/ejp-rd/vocabulary/Location>;
+  <http://purl.org/ejp-rd/vocabulary/country> "GERMANY" .
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_66246_PopulationCoverage> a <http://purl.org/ejp-rd/vocabulary/Location>;
+  <http://purl.org/ejp-rd/vocabulary/country> "European" .

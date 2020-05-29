@@ -1,0 +1,51 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ejp: <http://purl.org/ejp-rd/vocabulary/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ejprd: <https://www.ejprarediseases.org/metadata/core#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix efo: <http://www.ebi.ac.uk/efo/> .
+
+<https://www.ejprarediseases.org/metadata/> a ejp:BiologicalSamplePatient ;
+      ejprd:pseudonym  ejp:EUPID;
+      sio:diagnosis  ejprd:code;
+      efo:dateOfBirth ejp:dateTime ;
+      obo:sex xsd:string,
+              ejprd:code ;
+      sio:statusDescriptor xsd:string,
+                           ejprd:code ;
+      ejprd:dateOfDeath ejprd:dateTime ;
+      ejprd:firstContact ejprd:dateTime ;
+      efo:ageAtOnset ejprd:dateTime ;
+      efo:ageAtDiagnosis ejprd:dateTime ;
+      ejprd:diagnosisOfRareDisease  ejprd:dateTime ;
+      ejprd:geneticDiagnosis xsd:string ;
+      ejprd:undiagnosisCase xsd:string ;
+      ejprd:additionalProperties ejp:propertyvalue .
+
+<https://www.ejprarediseases.org/metadata/> a ejp:EUPID ;
+    dc:identifier  xsd:string .
+
+<https://www.ejprarediseases.org/metadata/> a ejprd:code;
+    ejprd:id  xsd:string ;
+    sio:url xsd:string ;
+    rdfs:label xsd:string ;
+    ejprd:descritpiton obo:biobank .
+
+<https://www.ejprarediseases.org/metadata/> a ejp:dateTime ;
+    sio:day xsd:gDay;
+    sio:month xsd:gMonth;
+    sio:year xsd:gYear;
+    sio:timeinstant xsd:time .
+
+<https://www.ejprarediseases.org/metadata/> a ejp:propertyvalue ;
+    sio:name xsd:string ;
+    obo:value xsd:string ;
+    ejprd:code  ejprd:code .

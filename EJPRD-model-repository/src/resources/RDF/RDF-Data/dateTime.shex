@@ -1,0 +1,67 @@
+PREFIX ejp: <http://purlorg/ejp-rd/vocabulary/>
+PREFIX sio: <http://semanticscienceorg/resource/>
+PREFIX ejprd: <https://wwwejprarediseasesorg/metadata/core#>
+PREFIX xsd: <http://wwww3org/2001/XMLSchema#>
+
+ejp:datetimeShape {
+      sio:day xsd:gDay;
+      sio:month xsd:gMonth;
+      sio:year xsd:gYear;
+      sio:timeinstant xsd:time
+}
+
+
+
+
+# The RDF graph data
+
+a.
+
+PREFIX ejp: <http://purlorg/ejp-rd/vocabulary/>
+PREFIX sio: <http://semanticscienceorg/resource/>
+PREFIX ejprd: <https://wwwejprarediseasesorg/metadata/core#>
+PREFIX xsd: <http://wwww3org/2001/XMLSchema#>
+PREFIX inst: <http://inst.example/#>
+
+inst:datetime  a ejp:datetime ;
+      sio:day 26 ;
+      sio:month 06;
+      sio:year 2020;
+      sio:timeinstant "13:34" .
+
+
+#The Result for (a)
+
+[{
+  "node": "http://inst.example/#datetime",
+  "shape": "http://purlorg/ejp-rd/vocabulary/datetimeShape",
+  "status": "conformant",
+  "elapsed": 1
+}]
+
+
+
+b.
+
+PREFIX ejp: <http://purlorg/ejp-rd/vocabulary/>
+PREFIX sio: <http://semanticscienceorg/resource/>
+PREFIX ejprd: <https://wwwejprarediseasesorg/metadata/core#>
+PREFIX xsd: <http://wwww3org/2001/XMLSchema#>
+PREFIX inst: <http://inst.example/#>
+
+inst:datetime a ejp:datetime ;
+      sio:day "20"^^xsd:gDay;
+      sio:month "02"^^xsd:gMonth;
+      sio:year "2020"^^xsd:gYear;
+      sio:timeinstant "113:34"^^xsd:time .
+
+
+
+#Result for b:
+
+[{
+  "node": "http://inst.example/#datetime",
+  "shape": "http://purlorg/ejp-rd/vocabulary/datetimeShape",
+  "status": "conformant",
+  "elapsed": 0
+}]

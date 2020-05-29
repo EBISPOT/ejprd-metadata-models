@@ -1,0 +1,24 @@
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8080/dataset/bbmri-eric:ID:DE_IBBJ:collection:BIO-MNDEG> a <http://www.w3.org/ns/ldp#Resource>,
+    <http://www.w3.org/ns/ldp#RDFResource> .
+
+<https://directory.bbmri-eric.eu//api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:DE_IBBJ:collection:BIO-MNDEG> a <http://purl.org/ejp-rd/vocabulary/BiobankDataset>;
+  <http://purl.org/dc/terms/title> "Biomarkers for Motoneuron and neurodegenerative diseases (BIO-MNDEG)";
+  <http://purl.org/dc/terms/publisher> [
+    <http://purl.org/dc/terms/title> "Integrated Biobank Jena";
+    <http://purl.org/dc/terms/spatial> [
+      <http://www.w3.org/ns/dcat#country-name> "DE";
+      <http://www.w3.org/ns/dcat#locality> ""
+    ]
+  ];
+  <http://www.w3.org/ns/dcat#theme> <http://identifiers.org/icd/G10>,
+    <http://identifiers.org/icd/A32>,
+    <http://identifiers.org/icd/G70>,
+    <http://identifiers.org/icd/A31>,
+    <http://identifiers.org/icd/A30>,
+    <http://identifiers.org/icd/G23>,
+    <http://identifiers.org/icd/G12>,
+    <http://identifiers.org/icd/G20>,
+    <http://identifiers.org/icd/G22>,
+    <http://identifiers.org/icd/G11>,
+    <http://identifiers.org/icd/G21> .

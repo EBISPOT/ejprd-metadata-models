@@ -1,0 +1,95 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1>
+    a <http://www.w3.org/2000/01/rdf-schema#Resource>, <http://www.w3.org/ns/ldp#Resource> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#measVal_e9a7af7f-12fc-4bf2-bf20-715dcbca7e88>
+    <http://semanticscience.org/resource/has-unit> <http://purl.obolibrary.org/obo/UO_0000275> ;
+    <http://semanticscience.org/resource/has-value> "85"^^<http://www.w3.org/2001/XMLSchema#int> ;
+    a <http://purl.obolibrary.org/obo/HP_0032493> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Increased circulating trypsinogen=85ng/ml"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#person_a52efa3c-cb4a-49a1-ae4e-4efbd5c37b72>
+    <http://purl.obolibrary.org/obo/RO_0002162> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#taxon_a641c693-8de7-4013-b625-1f167f30621b> ;
+    <http://semanticscience.org/resource/has-attribute> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#measVal_e9a7af7f-12fc-4bf2-bf20-715dcbca7e88> ;
+    <http://semanticscience.org/resource/has-identifier> <urn:eupid:europe.eu:eupid00001> ;
+    <http://semanticscience.org/resource/has-role> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#role_d847cefd-2a92-4e6f-b786-8ce3e72be1e3> ;
+    a <https://schema.org/Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "eupid: urn:eupid:europe.eu:eupid00001"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#person_b5d2a151-1d95-495f-b490-c4c97ac32cc3>
+    <http://purl.obolibrary.org/obo/RO_0002162> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#taxon_6bf0d0ae-2166-4797-af5c-218b8ecf3ece> ;
+    <http://semanticscience.org/resource/has-identifier> <urn:eupid:europe.eu:eupid00100> ;
+    <http://semanticscience.org/resource/has-role> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#role_e74acd19-ea0b-4af0-958a-284cf75c8336> ;
+    a <https://schema.org/Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "eupid: urn:eupid:europe.eu:eupid00100"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#process>
+    <http://semanticscience.org/resource/has-output> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#measVal_e9a7af7f-12fc-4bf2-bf20-715dcbca7e88> ;
+    <http://semanticscience.org/resource/start-time> "2020-02-12"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    a <http://ejprd-ontology.org/ejp/immunoreacticve-trypsinogen-measurement-process> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "immunoreactive trypinogen measurement process"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#role_d847cefd-2a92-4e6f-b786-8ce3e72be1e3>
+    <http://semanticscience.org/resource/is-realized-in> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#process> ;
+    a <http://purl.obolibrary.org/obo/OBI_0000093> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Patient Role"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#role_e74acd19-ea0b-4af0-958a-284cf75c8336>
+    <http://semanticscience.org/resource/is-realized-in> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#process> ;
+    a <http://purl.obolibrary.org/obo/OBI_0000207> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Health Care Provider Role"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#roleidentifier_008fe9c7-8aff-4f2e-a192-b6c08f728958>
+    <http://purl.org/dc/terms/identifier> "LUMC:12345"@en ;
+    <http://semanticscience.org/resource/denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#role_d847cefd-2a92-4e6f-b786-8ce3e72be1e3> ;
+    a <http://identifiers.org/uniqueids/lumc> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "LUMC Hospital Identifier LUMC:12345"@en ;
+    <https://purl.obolibrary.org/obo/iao.owl#denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#role_d847cefd-2a92-4e6f-b786-8ce3e72be1e3> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#roleidentifier_195f24fe-9a61-4fef-a2be-2935c3301a5b>
+    <http://purl.org/dc/terms/identifier> "HOSP:DrXX19834"@en ;
+    <http://semanticscience.org/resource/denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#role_e74acd19-ea0b-4af0-958a-284cf75c8336> ;
+    a <http://identifiers.org/uniqueids/MedicalProfessionals> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Medical Professional Identifier HOSP:DrXX19834"@en ;
+    <https://purl.obolibrary.org/obo/iao.owl#denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#role_e74acd19-ea0b-4af0-958a-284cf75c8336> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#taxon_6bf0d0ae-2166-4797-af5c-218b8ecf3ece>
+    a <http://purl.uniprot.org/taxonomy/9606> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homo sapiens"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#taxon_a641c693-8de7-4013-b625-1f167f30621b>
+    a <http://purl.uniprot.org/taxonomy/9606> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homo sapiens"@en .
+
+<http://identifiers.org/uniqueids/MedicalProfessionals>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Medical Professional Identifier"@en .
+
+<http://identifiers.org/uniqueids/lumc>
+    <http://www.w3.org/2000/01/rdf-schema#label> "LUMC Hospital Identifier"@en .
+
+<http://purl.obolibrary.org/obo/HP_0032493>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Increased circulating trypsinogen=85ng/ml"@en .
+
+<http://purl.obolibrary.org/obo/OBI_0000093>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Patient Role"@en .
+
+<http://purl.obolibrary.org/obo/OBI_0000207>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Health Care Provider Role"@en .
+
+<http://purl.obolibrary.org/obo/UO_0000275>
+    <http://www.w3.org/2000/01/rdf-schema#label> "ng/ml"@en .
+
+<http://purl.uniprot.org/taxonomy/9606>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homo sapiens"@en .
+
+<urn:eupid:europe.eu:eupid00001>
+    <http://purl.org/dc/terms/identifier> "urn:eupid:europe.eu:eupid00001"@en ;
+    a <https://ejp-ontology.eu/terms/EUPID> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "urn:eupid:europe.eu:eupid00001"@en .
+
+<urn:eupid:europe.eu:eupid00100>
+    <http://purl.org/dc/terms/identifier> "urn:eupid:europe.eu:eupid00100"@en ;
+    a <https://ejp-ontology.eu/terms/EUPID> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "urn:eupid:europe.eu:eupid00100"@en .
+

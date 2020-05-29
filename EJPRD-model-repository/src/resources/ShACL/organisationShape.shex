@@ -1,0 +1,19 @@
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ejprd: <https://www.ejprarediseases.org/metadata/core#>
+PREFIX obo:   <http://purl.obolibrary.org/obo/>
+PREFIX ejp-s: <http://purlorg/ejp-rd/vocabulary/>
+
+
+ejp-s:organisationShape {
+          obo:SIO_000116 xsd:string ;
+          obo:NCIT_C62574 xsd:string ;
+          obo:OMIABIS_0000017 xsd:string ;
+          sio:SIO_000172 @ejp-s:locationShape
+          }
+
+ejp-s:locationShape {
+          sio:SIO_000665 xsd:string ;
+          obo:code xsd:string ;
+          sio:SIO_000664 xsd:string
+          }

@@ -1,0 +1,24 @@
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_78757.ttl> a <http://www.w3.org/ns/ldp#RDFResource>,
+    <http://www.w3.org/ns/ldp#Resource>,
+    <http://purl.org/ejp-rd/vocabulary/BiobankDataset>;
+  <http://purl.org/dc/terms/title> "GMALL-registry: Biobank for adult patients with acute lymphoblastic leukemia or related diseases";
+  <http://purl.org/dc/elements/1.1/identifier> "78757";
+  <http://purl.org/dc/terms/publisher> <http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_78757_Organisation>;
+  <http://purl.org/ejp-rd/vocabulary/populationCoverage> <http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_78757_PopulationCoverage>;
+  <http://purl.org/ejp-rd/vocabulary/validationDate> "2009-10-09 00:00:00.0";
+  <http://www.w3.org/ns/dcat#theme> <http://www.orpha.net/ORDO/Orphanet_86870>,
+    <http://www.orpha.net/ORDO/Orphanet_513>,
+    <http://www.orpha.net/ORDO/Orphanet_544>,
+    <http://www.orpha.net/ORDO/Orphanet_543>;
+  <http://xmlns.com/foaf/0.1/page> "http://www.kompetenznetz-leukaemie.de/content/aerzte/studiengruppen/gmall/gmall_register/",
+    "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=252112" .
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_78757_Organisation> a <http://purl.org/ejp-rd/vocabulary/Organisation>;
+  <http://purl.org/dc/terms/spatial> <http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_78757_Organisation_Location> .
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_78757_Organisation_Location> a <http://purl.org/ejp-rd/vocabulary/Location>;
+  <http://purl.org/ejp-rd/vocabulary/country> "GERMANY" .
+
+<http://purl.org/ejp-rd/ldp/EJP/orphanet_catalog/BiobankDataset_Orphanet_78757_PopulationCoverage> a <http://purl.org/ejp-rd/vocabulary/Location>;
+  <http://purl.org/ejp-rd/vocabulary/country> "National" .

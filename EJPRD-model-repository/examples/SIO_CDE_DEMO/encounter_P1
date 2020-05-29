@@ -1,0 +1,95 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://ejprd-ontology.org/ejp/cystolic-pressure-measurement>
+    <http://www.w3.org/2000/01/rdf-schema#label> "cystolic blood pressure=120mmHg"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1>
+    a <http://www.w3.org/2000/01/rdf-schema#Resource>, <http://www.w3.org/ns/ldp#Resource> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#measVal_e488c8dc-f505-40bf-ad82-7f385f14b1dc>
+    <http://semanticscience.org/resource/has-unit> <http://purl.obolibrary.org/obo/UO_0000272> ;
+    <http://semanticscience.org/resource/has-value> "120"^^<http://www.w3.org/2001/XMLSchema#int> ;
+    a <http://ejprd-ontology.org/ejp/cystolic-pressure-measurement> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "cystolic blood pressure=120mmHg"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#person_0bde68df-6830-4853-9f25-20f8bf63da5b>
+    <http://purl.obolibrary.org/obo/RO_0002162> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#taxon_f03adf05-fdfd-497a-bef7-eb989912aff9> ;
+    <http://semanticscience.org/resource/has-identifier> <urn:eupid:europe.eu:eupid00100> ;
+    <http://semanticscience.org/resource/has-role> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#role_3bb81708-4b75-4255-bf55-5ca65694b9bd> ;
+    a <https://schema.org/Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "eupid: urn:eupid:europe.eu:eupid00100"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#person_60f9a73e-09d2-49e5-ab06-a052d7962778>
+    <http://purl.obolibrary.org/obo/RO_0002162> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#taxon_c23ec28a-52c1-4f23-a759-309dad9de19c> ;
+    <http://semanticscience.org/resource/has-attribute> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#measVal_e488c8dc-f505-40bf-ad82-7f385f14b1dc> ;
+    <http://semanticscience.org/resource/has-identifier> <urn:eupid:europe.eu:eupid00001> ;
+    <http://semanticscience.org/resource/has-role> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#role_f5671e26-2227-4b55-b72a-88d54676f7d4> ;
+    a <https://schema.org/Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "eupid: urn:eupid:europe.eu:eupid00001"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#process>
+    <http://semanticscience.org/resource/has-output> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#measVal_e488c8dc-f505-40bf-ad82-7f385f14b1dc> ;
+    <http://semanticscience.org/resource/start-time> "2020-01-18"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    a <http://ejprd-ontology.org/ejp/cystolic-pressure-measurement-process> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "cystolic pressure measurement process"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#role_3bb81708-4b75-4255-bf55-5ca65694b9bd>
+    <http://semanticscience.org/resource/is-realized-in> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#process> ;
+    a <http://purl.obolibrary.org/obo/OBI_0000207> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Health Care Provider Role"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#role_f5671e26-2227-4b55-b72a-88d54676f7d4>
+    <http://semanticscience.org/resource/is-realized-in> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#process> ;
+    a <http://purl.obolibrary.org/obo/OBI_0000093> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Patient Role"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#roleidentifier_7c198949-df3c-463f-9521-18c2622217d8>
+    <http://purl.org/dc/terms/identifier> "HOSP:Dr123"@en ;
+    <http://semanticscience.org/resource/denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#role_3bb81708-4b75-4255-bf55-5ca65694b9bd> ;
+    a <http://identifiers.org/uniqueids/MedicalProfessionals> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Medical Professional Identifier HOSP:Dr123"@en ;
+    <https://purl.obolibrary.org/obo/iao.owl#denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#role_3bb81708-4b75-4255-bf55-5ca65694b9bd> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#roleidentifier_bc612d4f-9c3e-4426-bd62-b83b12732899>
+    <http://purl.org/dc/terms/identifier> "MUH:111111"@en ;
+    <http://semanticscience.org/resource/denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#role_f5671e26-2227-4b55-b72a-88d54676f7d4> ;
+    a <http://identifiers.org/uniqueids/muh> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Maastricht University Hospital Identifier MUH:111111"@en ;
+    <https://purl.obolibrary.org/obo/iao.owl#denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#role_f5671e26-2227-4b55-b72a-88d54676f7d4> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#taxon_c23ec28a-52c1-4f23-a759-309dad9de19c>
+    a <http://purl.uniprot.org/taxonomy/9606> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homo sapiens"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1#taxon_f03adf05-fdfd-497a-bef7-eb989912aff9>
+    a <http://purl.uniprot.org/taxonomy/9606> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homo sapiens"@en .
+
+<http://identifiers.org/uniqueids/MedicalProfessionals>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Medical Professional Identifier"@en .
+
+<http://identifiers.org/uniqueids/muh>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Maastricht University Hospital Identifier"@en .
+
+<http://purl.obolibrary.org/obo/OBI_0000093>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Patient Role"@en .
+
+<http://purl.obolibrary.org/obo/OBI_0000207>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Health Care Provider Role"@en .
+
+<http://purl.obolibrary.org/obo/UO_0000272>
+    <http://www.w3.org/2000/01/rdf-schema#label> "mmHg"@en .
+
+<http://purl.uniprot.org/taxonomy/9606>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homo sapiens"@en .
+
+<urn:eupid:europe.eu:eupid00001>
+    <http://purl.org/dc/terms/identifier> "urn:eupid:europe.eu:eupid00001"@en ;
+    a <https://ejp-ontology.eu/terms/EUPID> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "urn:eupid:europe.eu:eupid00001"@en .
+
+<urn:eupid:europe.eu:eupid00100>
+    <http://purl.org/dc/terms/identifier> "urn:eupid:europe.eu:eupid00100"@en ;
+    a <https://ejp-ontology.eu/terms/EUPID> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "urn:eupid:europe.eu:eupid00100"@en .
+

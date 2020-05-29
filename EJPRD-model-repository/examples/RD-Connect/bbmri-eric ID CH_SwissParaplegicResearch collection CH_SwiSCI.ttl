@@ -1,0 +1,13 @@
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8080/dataset/bbmri-eric:ID:CH_SwissParaplegicResearch:collection:CH_SwiSCI> a <http://www.w3.org/ns/ldp#Resource>,
+    <http://www.w3.org/ns/ldp#RDFResource> .
+
+<https://directory.bbmri-eric.eu//api/v2/eu_bbmri_eric_collections/bbmri-eric:ID:CH_SwissParaplegicResearch:collection:CH_SwiSCI> a <http://purl.org/ejp-rd/vocabulary/BiobankDataset>;
+  <http://purl.org/dc/terms/title> "Swiss Spinal Cord Injury Cohort Study";
+  <http://purl.org/dc/terms/publisher> [
+    <http://purl.org/dc/terms/title> "Swiss Paraplegic Research";
+    <http://purl.org/dc/terms/spatial> [
+      <http://www.w3.org/ns/dcat#country-name> "CH";
+      <http://www.w3.org/ns/dcat#locality> ""
+    ]
+  ] .

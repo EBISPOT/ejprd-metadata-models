@@ -1,0 +1,64 @@
+#ShACL BioBank
+
+@prefix dc: <http://purl.org/dc/elements/1.1/>
+@prefix ejp: <http://purl.org/ejp-rd/vocabulary/>
+@prefix ejp-s: <http://purl.org/ejp-rd/metadata/shapes/>
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix sio: <http://semanticscience.org/resource/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+ejp-s:codeShape
+    a rdfs:class,   sh:NodeShape;
+    sh:nodeKind     sh:IRI;
+    sh:targetClass  ejp:code ;
+    rdfs:label      "Code" ;
+    rdfs:subClassOf rdfs:Resource ;
+
+
+    sh:property[
+      sh:name   "ejp:id" ;
+      sh:description  "";
+      sh:class      ejp:code;
+      sh:node       ejp-s:codeShape;
+      sh:datatype   xsd:string ;
+      sh:maxCount   1 ;
+      sh:minCount   1 ;
+    ];
+
+
+
+    sh:property[
+      sh:name   "sio:SIO_000811" ;
+      sh:description  "";
+      sh:class      ejp:code;
+      sh:node       ejp-s:codeShape;
+      sh:datatype   xsd:string ;
+      sh:maxCount   1 ;
+      sh:minCount   1 ;
+    ];
+
+
+    sh:property[
+      sh:name   "rdfs:label" ;
+      sh:description  "";
+      sh:class      ejp:code;
+      sh:node       ejp-s:codeShape;
+      sh:datatype   xsd:string ;
+      sh:maxCount   1 ;
+      sh:minCount   1 ;
+    ];
+
+    sh:property[
+      sh:name   "ejp:descritpiton" ;
+      sh:description  "";
+      sh:class      ejp:code;
+      sh:node       ejp-s:codeShape;
+      sh:datatype   xsd:string ;
+      sh:maxCount   1 ;
+      sh:minCount   1 ;
+    ].

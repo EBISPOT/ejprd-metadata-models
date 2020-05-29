@@ -1,0 +1,100 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#process>
+    a <http://ejprd-ontology.org/ejp/immunoreacticve-trypsinogen-measurement-process> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.2#process>
+    a <http://ejprd-ontology.org/ejp/sweat-chloride-measurement-process> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3>
+    a <http://www.w3.org/2000/01/rdf-schema#Resource>, <http://www.w3.org/ns/ldp#Resource> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#measVal_6b43761e-04fc-49e5-bac9-7e056f7e6d26>
+    <http://semanticscience.org/resource/has-value> "Cystic Fibrosis"@en ;
+    a <http://www.orpha.net/ORDO/Orphanet_586> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Cystic Fibrosis=Cystic Fibrosis"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#person_4c60b009-c707-4c9f-bab1-56a07c36e303>
+    <http://purl.obolibrary.org/obo/RO_0002162> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#taxon_e001b9a9-e4c4-437d-91f3-d417d7407cf5> ;
+    <http://semanticscience.org/resource/has-attribute> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#measVal_6b43761e-04fc-49e5-bac9-7e056f7e6d26> ;
+    <http://semanticscience.org/resource/has-identifier> <urn:eupid:europe.eu:eupid00001> ;
+    <http://semanticscience.org/resource/has-role> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#role_06e80103-ec2b-44d6-b4e2-36dd40aa7e38> ;
+    a <https://schema.org/Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "eupid: urn:eupid:europe.eu:eupid00001"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#person_66344649-c1c8-4382-8e56-f1ae4c0e6e56>
+    <http://purl.obolibrary.org/obo/RO_0002162> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#taxon_57ec641b-52f6-493c-a0b4-03c465701680> ;
+    <http://semanticscience.org/resource/has-identifier> <urn:eupid:europe.eu:eupid00100> ;
+    <http://semanticscience.org/resource/has-role> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#role_9fba888d-c05a-42e3-97cc-24be2e12467d> ;
+    a <https://schema.org/Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "eupid: urn:eupid:europe.eu:eupid00100"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#process>
+    <http://semanticscience.org/resource/has-output> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#measVal_6b43761e-04fc-49e5-bac9-7e056f7e6d26> ;
+    <http://semanticscience.org/resource/is-preceded-by> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#process>, <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.2#process> ;
+    <http://semanticscience.org/resource/start-time> "2020-03-05"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    a <http://ejprd-ontology.org/ejp/cystic-fibrosis-diagnostic-process> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Cystic Fibrosis diagnostic process"@en ;
+    <http://www.w3.org/ns/prov#wasInformedBy> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.1#process>, <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.2#process> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#role_06e80103-ec2b-44d6-b4e2-36dd40aa7e38>
+    <http://semanticscience.org/resource/is-realized-in> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#process> ;
+    a <http://purl.obolibrary.org/obo/OBI_0000093> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Patient Role"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#role_9fba888d-c05a-42e3-97cc-24be2e12467d>
+    <http://semanticscience.org/resource/is-realized-in> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#process> ;
+    a <http://purl.obolibrary.org/obo/OBI_0000207> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Health Care Provider Role"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#roleidentifier_d5fbd094-f503-4fd1-80ff-e87998246de6>
+    <http://purl.org/dc/terms/identifier> "HOSP:Dr_CF_001"@en ;
+    <http://semanticscience.org/resource/denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#role_9fba888d-c05a-42e3-97cc-24be2e12467d> ;
+    a <http://identifiers.org/uniqueids/MedicalProfessionals> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Medical Professional Identifier HOSP:Dr_CF_001"@en ;
+    <https://purl.obolibrary.org/obo/iao.owl#denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#role_9fba888d-c05a-42e3-97cc-24be2e12467d> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#roleidentifier_e4ded570-2687-4f62-bfbb-894456e2255d>
+    <http://purl.org/dc/terms/identifier> "LUMC:12345"@en ;
+    <http://semanticscience.org/resource/denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#role_06e80103-ec2b-44d6-b4e2-36dd40aa7e38> ;
+    a <http://identifiers.org/uniqueids/lumc> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "LUMC Hospital Identifier LUMC:12345"@en ;
+    <https://purl.obolibrary.org/obo/iao.owl#denotes> <http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#role_06e80103-ec2b-44d6-b4e2-36dd40aa7e38> .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#taxon_57ec641b-52f6-493c-a0b4-03c465701680>
+    a <http://purl.uniprot.org/taxonomy/9606> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homo sapiens"@en .
+
+<http://ejprd.fair-dtls.surf-hosted.nl:8890/DAV/home/LDP/EJP/SIO_CDE_DEMO/encounter_P1.3#taxon_e001b9a9-e4c4-437d-91f3-d417d7407cf5>
+    a <http://purl.uniprot.org/taxonomy/9606> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homo sapiens"@en .
+
+<http://identifiers.org/uniqueids/MedicalProfessionals>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Medical Professional Identifier"@en .
+
+<http://identifiers.org/uniqueids/lumc>
+    <http://www.w3.org/2000/01/rdf-schema#label> "LUMC Hospital Identifier"@en .
+
+<http://purl.obolibrary.org/obo/OBI_0000093>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Patient Role"@en .
+
+<http://purl.obolibrary.org/obo/OBI_0000207>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Health Care Provider Role"@en .
+
+<http://purl.uniprot.org/taxonomy/9606>
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homo sapiens"@en .
+
+<http://www.orpha.net/ORDO/Orphanet_586>
+    a <http://www.w3.org/2002/07/owl#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Cystic Fibrosis=Cystic Fibrosis"@en .
+
+<urn:eupid:europe.eu:eupid00001>
+    <http://purl.org/dc/terms/identifier> "urn:eupid:europe.eu:eupid00001"@en ;
+    a <https://ejp-ontology.eu/terms/EUPID> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "urn:eupid:europe.eu:eupid00001"@en .
+
+<urn:eupid:europe.eu:eupid00100>
+    <http://purl.org/dc/terms/identifier> "urn:eupid:europe.eu:eupid00100"@en ;
+    a <https://ejp-ontology.eu/terms/EUPID> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "urn:eupid:europe.eu:eupid00100"@en .
+
