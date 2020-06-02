@@ -1,0 +1,5 @@
+PREFIX ex: <http://ex.example/#>
+PREFIX inst: <http://example.com/users/>
+
+inst:Student2 ex:hasGuardian
+  inst:Person4, inst:Person5, inst:Person6 .
