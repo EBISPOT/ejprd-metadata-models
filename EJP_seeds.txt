@@ -40,6 +40,9 @@ value http://purl.obolibrary.org/obo/NCIT_C25712
 
 systolic blood pressure http://www.ebi.ac.uk/efo/EFO_0006335
 cystolic-pressure-measurement
+immunoreacticve-trypsinogen-measurement-process
+Trypsin and Trypsinogen Measurement http://purl.obolibrary.org/obo/NCIT_C135450
+
 
 
 ejp: <http://purl.org/ejp-rd/vocabulary/>
