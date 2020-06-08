@@ -27,11 +27,12 @@
       }
     },
     "disease_code": {
-      "description" : "A primary disease code associated with the case or group of patients",
-      "type" : "array",
-      "items" : {
-       "$ref" : "vocabulary_code.json"
+      "description": "A primary disease code associated with the case or group of patients",
+      "type": "array",
+      "items": {
+        "$ref": "vocabulary_code.jsn"
       }
+     }
     }
   }
-}
+
