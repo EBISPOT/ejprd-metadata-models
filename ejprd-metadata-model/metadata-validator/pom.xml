@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ejprd-metadata-models</artifactId>
+        <groupId>uk.ac.ebi.spot.ejprd</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>metadata-validator</artifactId>
+    <name>EJPRD Metadata Model Validator</name>
+    <url>https://www.ejprarediseases.org/</url>
+     <description>This project describes the European Joint Programm on Rare Diseases metadata publication (https://www.ejprarediseases.org/) published
+        by EJPRD Committee on EJPRD Metadata.</description>
+
+    <mailingLists>
+        <mailingList>
+            <name>EJPRD Developer List</name>
+            <subscribe>ejprd-dev-subscribe@ebi.ac.uk</subscribe>
+            <unsubscribe>ejprd-dev-unsubscribe@apress.com</unsubscribe>
+            <post>developer@ebi.ac.uk</post>
+        </mailingList>
+    </mailingLists>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.6.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- ShEx validator -->
+        <dependency>
+            <groupId>fr.inria.lille.shexjava</groupId>
+            <artifactId>shexjava-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!-- Apache Commons RDF-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-rdf-api</artifactId>
+            <version>0.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-rdf-simple</artifactId>
+            <version>0.5.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
