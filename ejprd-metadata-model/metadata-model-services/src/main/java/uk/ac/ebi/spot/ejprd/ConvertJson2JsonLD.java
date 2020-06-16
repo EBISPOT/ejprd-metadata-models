@@ -15,7 +15,7 @@ public class ConvertJson2JsonLD {
             com.github.jsonldjava.core.JsonLdOptions options=new com.github.jsonldjava.core.JsonLdOptions ();
             options.format="application/jsonld";
 
-            final java.util.Map <String, Object> nses=new java.util.HashMap <String, Object> ();
+            final java.util.Map <String, Object> nses = new java.util.HashMap <String, Object> ();
             nses.put ( "dcterms", "http://purl.org/dc/terms/" );
             nses.put ( "@base", "http://purl.org/ejp-rd/vocabulary/" );
             nses.put ( "ejp", "http://purl.org/ejp-rd/vocabulary/" );
