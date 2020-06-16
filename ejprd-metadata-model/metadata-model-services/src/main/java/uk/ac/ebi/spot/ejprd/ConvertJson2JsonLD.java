@@ -6,12 +6,12 @@ import org.apache.jena.riot.Lang.*;
 public class ConvertJson2JsonLD {
 
 
-    private String asJson (com.hp.hpl.jena.rdf.model.Model model) {
-        java.io.StringWriter sw = new java.io.StringWriter ();
-        org.apache.jena.riot.RDFDataMgr.write ( sw, (org.apache.jena.graph.Graph) model, org.apache.jena.riot.Lang.JSONLD );
-        String s=new String ();
+    private String asJson () {
+
         try {
-            Object jsonObject=com.github.jsonldjava.utils.JsonUtils.fromString ( sw.toString () );
+           // Object jsonObject=com.github.jsonldjava.utils.JsonUtils.fromString ( sw.toString () );
+            java.io.InputStream inputStream = new java.io.FileInputStream ( pathname + fdir + "edit_json_schema/sample.json" );
+            Object jsonObject = com.github.jsonldjava.utils.JsonUtils.fromInputStream( inputStream );
             com.github.jsonldjava.core.JsonLdOptions options=new com.github.jsonldjava.core.JsonLdOptions ();
             options.format="application/jsonld";
 
