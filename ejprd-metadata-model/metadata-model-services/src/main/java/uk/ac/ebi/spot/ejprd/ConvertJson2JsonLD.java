@@ -13,9 +13,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-
-
-
 public class ConvertJson2JsonLD {
 
                 String s;
