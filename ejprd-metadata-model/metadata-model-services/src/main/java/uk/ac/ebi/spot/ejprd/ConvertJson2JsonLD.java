@@ -28,23 +28,23 @@ public class ConvertJson2JsonLD {
                         JsonLdOptions options=new JsonLdOptions ();
                         options.format="application/jsonld";
 
-                        final Map<String, Object> nses = new HashMap<String, Object>();
-                        nses.put ( "dcterms", "http://purl.org/dc/terms/" );
-                        nses.put ( "@base", "http://purl.org/ejp-rd/vocabulary/" );
-                        nses.put ( "ejp", "http://purl.org/ejp-rd/vocabulary/" );
-                        nses.put ( "rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#" );
-                        nses.put ( "rdfs", "http://www.w3.org/2000/01/rdf-schema#" );
-                        nses.put ( "owl", "http://www.w3.org/2002/07/owl#" );
-                        nses.put ( "xsd", "http://www.w3.org/2001/XMLSchema#" );
-                        nses.put ( "dct", "http://purl.org/dc/terms/" );
-                        nses.put ( "dc", "http://purl.org/dc/elements/1.1/" );
-                        nses.put ( "dcat", "http://www.w3.org/ns/dcat#" );
-                        nses.put ( "vcard", "http://www.w3.org/ns/dcat#" );
-                        nses.put ( "foaf", "http://xmlns.com/foaf/0.1/" );
-                        nses.put ( "umbel", "http://umbel.org/umbel#" );
+                        final Map<String, Object> context = new HashMap<String, Object>();
+                        context.put ( "dcterms", "http://purl.org/dc/terms/" );
+                        context.put ( "@base", "http://purl.org/ejp-rd/vocabulary/" );
+                        context.put ( "ejp", "http://purl.org/ejp-rd/vocabulary/" );
+                        context.put ( "rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#" );
+                        context.put ( "rdfs", "http://www.w3.org/2000/01/rdf-schema#" );
+                        context.put ( "owl", "http://www.w3.org/2002/07/owl#" );
+                        context.put ( "xsd", "http://www.w3.org/2001/XMLSchema#" );
+                        context.put ( "dct", "http://purl.org/dc/terms/" );
+                        context.put ( "dc", "http://purl.org/dc/elements/1.1/" );
+                        context.put ( "dcat", "http://www.w3.org/ns/dcat#" );
+                        context.put ( "vcard", "http://www.w3.org/ns/dcat#" );
+                        context.put ( "foaf", "http://xmlns.com/foaf/0.1/" );
+                        context.put ( "umbel", "http://umbel.org/umbel#" );
 
                         final Map <String, Object> ctx=new HashMap <String, Object> ();
-                        ctx.put ( "@context", nses );
+                        ctx.put ( "@context", context );
 
                         Object compact = JsonLdProcessor.compact ( jsonObject, ctx, options );
 
