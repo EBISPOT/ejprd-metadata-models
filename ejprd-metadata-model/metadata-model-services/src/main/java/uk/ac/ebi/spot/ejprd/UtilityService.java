@@ -1,30 +1,46 @@
 package uk.ac.ebi.spot.ejprd;
 
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Stream;
 
 
 public class UtilityService {
 
-    private final static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(UtilityService.class);
+
     private String homeDir = System.getProperty("user.home");
-    private com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper ();
+    private final static Logger log = LoggerFactory.getLogger(UtilityService.class);
+    private ObjectMapper mapper = new ObjectMapper();
+
 
     /*************************************************************************************************************
      *                                           DATA SERIALIZER METHODS SECTION                                 *
      ************************************************************************************************************/
 
-    public java.util.List <java.util.Map <String, String>> serializeDataToMaps(String fileName) {
+    public List<Map<String, String>> serializeDataToMaps(String fileName) {
 
         String fileExtension = getFileExtension(fileName);
 
-        java.util.List <java.util.Map <String, String>> csvMaps = new java.util.ArrayList <> ();
+        List<Map<String, String>> csvMaps = new ArrayList<>();
 
         if (fileExtension.equals("json")) {
 
-            csvMaps = (java.util.List) serializeJSONToMaps(fileName);
+            csvMaps = (List) serializeJSONToMaps(fileName);
         } else {
 
-            System.out.println ("This folder does not contains any json extension file");
+            System.out.println("There are no json file format in this folder");
         }
 
         return csvMaps;
@@ -32,36 +48,35 @@ public class UtilityService {
 
 
 
-    public java.util.Map <String, java.util.List <java.util.Map <String, String>>> serializeAndGroupFileContent(String fileName, String groupColumn) {
+    public Map<String, List<Map<String, String>> > serializeAndGroupFileContent(String fileName, String groupColumn) {
 
         String fileExtension = getFileExtension(fileName);
 
-        java.util.List <java.util.Map <String, String>> csvMaps = new java.util.ArrayList <> ();
+        List<Map<String, String>> csvMaps = new ArrayList<>();
 
         switch (fileExtension){
 
-
             case "json":
-                csvMaps = (java.util.List) serializeJSONToMaps(fileName);
+                csvMaps = (List) serializeJSONToMaps(fileName);
                 break;
+
         }
         if(csvMaps == null) log.error("Map is null for "+fileName +" in groupCol " +groupColumn);
 
-        java.util.Map <String, java.util.List <java.util.Map <String, String>>> groupedMap = groupDataByColumn(csvMaps, groupColumn);
+        Map<String, List<Map<String, String>> > groupedMap = groupDataByColumn(csvMaps, groupColumn);
 
         return groupedMap;
     }
 
 
 
-    public java.util.Map <String, java.util.List <java.util.Map <String, String>>> groupDataByColumn(java.util.List <java.util.Map <String, String>> csvMaps, String groupColumn) {
+    public Map<String, List<Map<String, String>> > groupDataByColumn(List<Map<String, String>> csvMaps, String groupColumn) {
 
+        Map<String, List<Map<String, String>> > groupedMap = new LinkedHashMap<>();
 
-        java.util.Map <String, java.util.List <java.util.Map <String, String>>> groupedMap = new java.util.LinkedHashMap <> ();
+        for (Map<String, String> rowData : csvMaps){
 
-        for (java.util.Map <String, String> rowData : csvMaps){
-
-            java.util.List <java.util.Map <String, String>> tempList = new java.util.ArrayList <> ();
+            List<Map<String, String>> tempList = new ArrayList<>();
 
             String rowKey = rowData.get(groupColumn);
 
@@ -81,31 +96,35 @@ public class UtilityService {
         return groupedMap;
     }
 
+
+
+
+
     /*************************************************************************************************************
      *                                           JSON FILE HANDLER SECTION                                      *
      ************************************************************************************************************/
 
     // SERIALIZER : CONVERT JSON URL TO JAVA MAPS
-    public java.util.List <java.util.Map <String, Object>> serializeJSONToMaps(String jsonFile) {
+    public List<Map<String, Object>> serializeJSONToMaps(String jsonFile) {
 
-        com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper ();
+        ObjectMapper mapper = new ObjectMapper();
 
-        java.util.List <java.util.Map <String, Object>> data;
+        List data;
 
-        com.fasterxml.jackson.databind.JsonNode node = readJsonLocal(jsonFile);
+        JsonNode node = readJsonLocal(jsonFile);
         try {
-            data = mapper.convertValue(node, java.util.List.class);
+            data = mapper.convertValue(node, List.class);
 
         }catch (Exception e){
 
-            java.util.Map <String, Object> json = mapper.convertValue(node, java.util.Map.class);
+            Map<String, Object> json = mapper.convertValue(node, Map.class);
 
             String jsonKey = "";
-            for (java.util.Map.Entry<String, Object> entry : json.entrySet() ) {      // GET THE JSON KEY
+            for (Map.Entry<String, Object> entry : json.entrySet() ) {      // GET THE JSON KEY
                 jsonKey = entry.getKey();
             }
 
-            data = (java.util.List) json.get(jsonKey);
+            data = (List) json.get(jsonKey);
         }
 
         return data;
@@ -113,15 +132,15 @@ public class UtilityService {
 
 
     // SERIALIZER : CONVERT JSON URL TO JAVA MAPS
-    public java.util.List <java.util.Map <String, Object>> serializeJSONToMaps(String jsonFile, String jsonKey) {
+    public List<Map<String, Object>> serializeJSONToMaps(String jsonFile,String jsonKey) {
 
-        com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper ();
+        ObjectMapper mapper = new ObjectMapper();
 
-        com.fasterxml.jackson.databind.JsonNode node = readJsonLocal(jsonFile);
+        JsonNode node = readJsonLocal(jsonFile);
 
-        java.util.Map <String, Object> json = mapper.convertValue(node, java.util.Map.class);
+        Map<String, Object> json = mapper.convertValue(node, Map.class);
 
-        java.util.List <java.util.Map <String, Object>> data = (java.util.List) json.get(jsonKey);
+        List<Map<String, Object>> data = (List) json.get(jsonKey);
 
         return data;
     }
@@ -129,15 +148,15 @@ public class UtilityService {
 
 
     // PARSER : LOAD JSON NODES FROM  REMOTE JSON HTTP URL
-    public com.fasterxml.jackson.databind.JsonNode readJsonURL(String apiLink) {
+    public JsonNode readJsonURL(String apiLink) {
 
-        com.fasterxml.jackson.databind.JsonNode jsonNode = null;
-        com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper ();
+        JsonNode jsonNode = null;
+        ObjectMapper mapper = new ObjectMapper();
 
         try {
 
-            java.net.URL url = new java.net.URL (apiLink);
-            java.net.HttpURLConnection conn = (java.net.HttpURLConnection) url.openConnection();
+            URL url = new URL(apiLink);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");
 
@@ -145,14 +164,14 @@ public class UtilityService {
                 throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
             }
 
-            java.io.BufferedReader br = new java.io.BufferedReader (new java.io.InputStreamReader ((conn.getInputStream())));
+            BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
 
             jsonNode = mapper.readTree(br);
             conn.disconnect();
 
-        } catch (java.net.MalformedURLException e) {
+        } catch (MalformedURLException e) {
             e.printStackTrace();
-        } catch (java.io.IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
@@ -162,14 +181,14 @@ public class UtilityService {
 
 
     // PARSER : LOAD JSON NODES FROM  LOCAL JSON
-    public com.fasterxml.jackson.databind.JsonNode readJsonLocal(String jsonFileLink) {
+    public JsonNode readJsonLocal(String jsonFileLink) {
 
-        com.fasterxml.jackson.databind.JsonNode jsonNode = null;
-        com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper ();
+        JsonNode jsonNode = null;
+        ObjectMapper mapper = new ObjectMapper();
 
         try {
 
-            java.io.BufferedReader br = new java.io.BufferedReader (new java.io.FileReader (jsonFileLink));
+            BufferedReader br = new BufferedReader(new FileReader(jsonFileLink));
             jsonNode = mapper.readTree(br);
 
         }catch (Exception e) {
@@ -179,16 +198,17 @@ public class UtilityService {
         return jsonNode;
     }
 
+
     /*************************************************************************************************************
      *                              LOCAL OR REMOTE FILE HANDLERS PARSERS SECTION                               *
      ************************************************************************************************************/
 
     // PARSER : CONVERT ANY FILE TO INPUTSTREAM
-    public java.io.FileInputStream convertFileToStream(String filePath){
+    public FileInputStream convertFileToStream(String filePath){
 
-        java.io.FileInputStream inputStream = null;
+        FileInputStream inputStream = null;
         try {
-            inputStream = new java.io.FileInputStream (new java.io.File (filePath));
+            inputStream = new FileInputStream(new File(filePath));
             log.info("Loading template from : {}", filePath);
         }catch (Exception e) {
             log.error("UtilityService convertFileToStream says Data File "+filePath+" Not Found");
@@ -196,6 +216,48 @@ public class UtilityService {
 
         return inputStream;
     }
+
+
+
+    // PARSER : LOAD FILE CONTENT FROM HTTP URL
+    public String parseURL(String urlStr) {
+
+        StringBuilder sb = new StringBuilder();
+
+        try {
+            URL url = new URL(urlStr);
+            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+            String inputLine;
+            while ((inputLine = in.readLine()) != null) {
+                sb.append(inputLine);
+            }
+            in.close();
+        } catch (Exception e) {
+            log.error("Unable to read from URL " + urlStr, e);
+        }
+        return sb.toString();
+    }
+
+
+
+    // LOAD FILE CONTENT FROM LOCAL DIRECTORY
+    public String parseFile(String path) {
+
+        StringBuilder sb = new StringBuilder();
+
+        try {
+            Stream<String> stream = Files.lines(Paths.get(path));
+
+            Iterator itr = stream.iterator();
+            while (itr.hasNext()) {
+                sb.append(itr.next());
+            }
+        } catch (Exception e) {
+            log.error("Failed to load file " + path, e);
+        }
+        return sb.toString();
+    }
+
 
     // GET THE EXTENSION OF A FILE
     public String getFileExtension(String fileName){
@@ -212,7 +274,7 @@ public class UtilityService {
 
         // Write to the file using BufferedReader and FileWriter
         try {
-            java.io.BufferedWriter writer = new java.io.BufferedWriter (new java.io.FileWriter (destination, shouldAppend));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(destination, shouldAppend));
             writer.append(data);
             writer.close();
 
@@ -227,8 +289,8 @@ public class UtilityService {
         Boolean report = false;
         try {
 
-            java.nio.file.Path path = java.nio.file.Paths.get(localDirectory);
-            java.nio.file.Files.deleteIfExists(path);
+            Path path = Paths.get(localDirectory);
+            Files.deleteIfExists(path);
 
             report = true;
         } catch (Exception e) {
@@ -242,9 +304,9 @@ public class UtilityService {
 
         String fileNames = "";
 
-        java.io.File folder = new java.io.File (directory);
+        File folder = new File(directory);
 
-        java.io.File[] filDir = folder.listFiles();
+        File[] filDir = folder.listFiles();
 
         if (filDir.length == 0) {
 
@@ -266,26 +328,61 @@ public class UtilityService {
 
         return "";
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*************************************************************************************************************
+     *                                          OTHER UTILITIES                                                  *
+     ************************************************************************************************************/
+    // File to Byte
+    public void moveFile(String source,String destination){
+
+        // Create Directory if it does not exist
+        this.mkDirectoryFromFilePathName(destination);
+
+        byte[] bytes = convertLocalFileToByte(source);
+
+        Path path = Paths.get(destination);
+        try{
+            Files.write(path, bytes);
+        }catch (Exception e){}
+
+    }
+
     public void mkDirectoryFromFilePathName(String filePath){
 
         // Get Directory from file path string
         String directoryName = filePath.substring(0, filePath.lastIndexOf("/"));
 
         // Create Directory if it does not exist
-        java.io.File directory = new java.io.File (directoryName);
+        File directory = new File(directoryName);
 
         if (!directory.exists()){
             directory.mkdirs();
         }
     }
 
-
     public  byte[] convertLocalFileToByte(String filePath) {
 
         byte fileData[] = null;
-        java.io.File file = new java.io.File (filePath);
+        File file = new File(filePath);
 
-        try (java.io.FileInputStream inputStream = new java.io.FileInputStream (file)) {
+        try (FileInputStream inputStream = new FileInputStream(file)) {
 
             fileData = new byte[(int) file.length()];
             inputStream.read(fileData);
@@ -296,15 +393,13 @@ public class UtilityService {
         return fileData;
     }
 
+    public List<Map> objectArrayListToMapList(List<Object[]> dataList, List<String> keys){
 
-
-    public java.util.List <java.util.Map> objectArrayListToMapList(java.util.List <Object[]> dataList, java.util.List <String> keys){
-
-        java.util.List <java.util.Map> result = new java.util.ArrayList <> ();
+        List<Map> result = new ArrayList<>();
 
         for (Object[] data : dataList) {
 
-            java.util.Map <String, Object> dataMap = new java.util.LinkedHashMap <> ();
+            Map<String, Object> dataMap = new LinkedHashMap<>();
             int count = 0;
             for (Object content : data){
 
@@ -317,10 +412,9 @@ public class UtilityService {
     }
 
 
+    public JsonNode jsonStringToNode(String jsonString){
 
-    public com.fasterxml.jackson.databind.JsonNode jsonStringToNode(String jsonString){
-
-        com.fasterxml.jackson.databind.JsonNode jsonNode = null;
+        JsonNode jsonNode = null;
 
         try {
             jsonNode = mapper.readTree(jsonString);
@@ -330,5 +424,3 @@ public class UtilityService {
     }
 
 }
-
-
