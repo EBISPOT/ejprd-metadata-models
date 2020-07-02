@@ -1,0 +1,11 @@
+{
+   "@context":
+   {
+   "code":"https://ejprd.org/"
+},
+      "@context": "https://schema.org/docs/jsonldcontext.jsonld",
+      "id":"ID",
+      "url":"url",
+      "label":"label",
+      "description":"description"
+   }

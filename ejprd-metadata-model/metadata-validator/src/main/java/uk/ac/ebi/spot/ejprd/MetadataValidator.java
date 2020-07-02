@@ -5,9 +5,9 @@ package uk.ac.ebi.spot.ejprd;
 
 public class MetadataValidator {
 
-        private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger ( MetadataValidator.class );
+        private static Logger logger = LoggerFactory.getLogger ( MetadataValidator.class );
 
-        private final static org.apache.commons.rdf.api.RDF rdfFactory = new org.apache.commons.rdf.simple.SimpleRDF ();
+        private final static api.RDF rdfFactory = new rdf.simple.SimpleRDF ();
 
         public static void validateTTL (String schemaFileName, String dataFileName, String validationStatusFileName, String focusNode, String shexShape) {
             fr.inria.lille.shexjava.schema.ShexSchema schema = getSchema ( schemaFileName );

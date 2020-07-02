@@ -1,0 +1,4 @@
+dir=System.getProperty("user.dir")
+fileDirectory="/EJPRD/ejprd_metadata_model/data/edit_json_files/"
+fileName="sample.json"
+file=(dir + fileDirectory + fileName)

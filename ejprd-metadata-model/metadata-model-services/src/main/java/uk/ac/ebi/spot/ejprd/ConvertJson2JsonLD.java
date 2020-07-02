@@ -16,6 +16,7 @@ import java.util.Map;
 public class ConvertJson2JsonLD {
 
                 String s;
+
         private String ConvertJson2JsonLD () {
 
                 try {

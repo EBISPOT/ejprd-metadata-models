@@ -1,4 +1,4 @@
-<html><head><title>Equivalent HTML</title></head><body>{
+{
   "$id" : "case.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Case or observation",
@@ -30,9 +30,9 @@
       "description": "A primary disease code associated with the case or group of patients",
       "type": "array",
       "items": {
-        "$ref": "vocabulary_code.jsn"
+        "$ref": "vocabulary_code.json"
       }
      }
     }
   }
-</body></html>
+

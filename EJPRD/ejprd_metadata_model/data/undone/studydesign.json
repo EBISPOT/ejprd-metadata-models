@@ -1,0 +1,49 @@
+{
+   "@context": "https://schema.org/docs/jsonldcontext.jsonld",
+   "studydesign":{
+      "inclusionexclusionCriteria":"string",
+      "recruitmentArea":{
+        "location":{
+        "street": "",
+        "city": "",
+        "code": "",
+        "country": ""
+      }
+      },
+      "recruitmentStartDate":{
+         "DateTime":{
+            "day":"day",
+            "month":"month",
+            "year":"year",
+            "time":"time"
+         }
+      },
+      "recruitmentEndDate":{
+         "DateTime":{
+            "day":"day",
+            "month":"month",
+            "year":"year",
+            "time":"time"
+         }
+      },
+      "numberOfCases":"integer",
+      "dataSource":{
+         "code":{
+            "id":"ID",
+            "url":"url",
+            "label":"label",
+            "description":"description"
+         }
+      },
+      "privacyPolicy":"string",
+      "ethicalReviewCommitte":"string",
+      "availableForFutureCollaboration":"string",
+      "additionalProperties":{
+         "PropertyValue":{
+            "name":"name",
+            "value":"value",
+            "code":"code"
+         }
+      }
+   }
+}
