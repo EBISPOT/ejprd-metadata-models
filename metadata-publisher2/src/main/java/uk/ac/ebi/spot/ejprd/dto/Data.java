@@ -29,4 +29,11 @@ public class Data {
     public void setJson2Rdf(Object json2Rdf) {
         this.json2Rdf = json2Rdf;
     }
+
+    @Override
+    public String toString() {
+        return "Data{" +
+                "compact=" + compact +
+                '}';
+    }
 }

@@ -1,58 +1,70 @@
 package uk.ac.ebi.spot.ejprd.metadata.publisher;
 
-import com.github.jsonldjava.core.DocumentLoader;
-import com.github.jsonldjava.core.JsonLdError;
-import com.github.jsonldjava.core.JsonLdOptions;
-import com.github.jsonldjava.core.JsonLdProcessor;
+import com.github.jsonldjava.core.*;
+import com.github.jsonldjava.utils.JarCacheResource;
 import com.github.jsonldjava.utils.JsonUtils;
 import uk.ac.ebi.spot.ejprd.dto.Data;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public class ConvertJsonToJsonLD {
 
-        String dir = System.getProperty("user.dir");
+    private static String userDirectory = System.getProperty("user.dir");
+    private static String fileDirectory = "/data/edit_json_files/";
+    private static final DocumentLoader documentLoader = new DocumentLoader();
 
-        String fileDirectory = "/data/edit_json_files/";
+    private static final String contextFileUrl = "ejp_vocabulary_context.json";
 
-        private final DocumentLoader documentLoader = new DocumentLoader();
+
+    private JarCacheResource loadContext() {
+        JarCacheResource jarCacheResource = null;
+        try {
+            Enumeration<URL> resourcesEnum = getClass().getClassLoader().getResources(contextFileUrl);
+
+            for (Iterator<String> i = resourcesEnum; i.hasNext();) {
+                String item = i.next();
+                System.out.println(item);
+            }
+            jarCacheResource =
+                    new JarCacheResource(getClass().getClassLoader().getResource(contextFileUrl));
+        }
+        catch (IOException ioe) {
+            System.out.println(ioe.getStackTrace());
+        }
+        return jarCacheResource;
+    }
 
     public List<Data> convertfile() throws IOException, JsonLdError {
 
-        UtilityService utilityService = new UtilityService();
-
-
-        List<String> filenames = utilityService.listAllFilesInADirectory(dir + fileDirectory);
-
-        Map<String, Object> compact = null;
-       // System.out.println(filenames);
+        List<String> filenames = UtilityService.listAllFilesInADirectory(userDirectory + fileDirectory);
 
         //List<Map<String, Object>> compactList = new ArrayList<>();
         List<Data> dataList = new ArrayList<>();
-
         for (String fileName : filenames){
 
             // Open a valid json(-ld) input file
-            InputStream inputStream = new FileInputStream(dir + fileDirectory + fileName);
+            InputStream inputStream = new FileInputStream(userDirectory + fileDirectory + fileName);
             // Read the file into an Object
 
             Object jsonObject = JsonUtils.fromInputStream(inputStream);
 
-            // Create a context JSON map containing prefixes and definitions
-            //Map<String, Object> context = new HashMap<>();
-            //Map<String, object> context = (Map<string, object="">) new DocumentLoader().fromURL(new URL(CONTEXT));
+            JarCacheResource jarCacheResource = loadContext();
+            ObjectInputStream ois = new ObjectInputStream(jarCacheResource.getInputStream());
+            Object object = null;
 
+            try {
+                object = ois.readObject();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
 
-            Map<String, Object> context = (Map<String, Object>) new DocumentLoader();
-
+            Map<String, Object> context = (Map<String, Object>) object;
             System.setProperty("com.github.jsonldjava.disallowRemoteContextLoading", "true");
             System.setProperty(DocumentLoader.DISALLOW_REMOTE_CONTEXT_LOADING, "true");
 //                    .fromURL(new URL(CONTEXT));
@@ -73,6 +85,7 @@ public class ConvertJsonToJsonLD {
             // Customise options...
             // Call whichever JSONLD function you want! (e.g. compact)
 
+            Map<String, Object> compact = null;
             try {
                 compact = JsonLdProcessor.compact(jsonObject, context, options);
             } catch (JsonLdError jsonLdError) {

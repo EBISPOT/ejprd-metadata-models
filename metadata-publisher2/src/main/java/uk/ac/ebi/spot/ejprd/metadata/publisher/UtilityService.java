@@ -20,16 +20,15 @@ import java.util.stream.Stream;
 public class UtilityService {
 
 
-    private String homeDir = System.getProperty("user.home");
+    private static String homeDir = System.getProperty("user.home");
     private final static Logger log = LoggerFactory.getLogger(UtilityService.class);
-    private ObjectMapper mapper = new ObjectMapper();
 
 
     /*************************************************************************************************************
      *                                           DATA SERIALIZER METHODS SECTION                                 *
      ************************************************************************************************************/
 
-    public List<Map<String, String>> serializeDataToMaps(String fileName) {
+    public static List<Map<String, String>> serializeDataToMaps(String fileName) {
 
         String fileExtension = getFileExtension(fileName);
 
@@ -48,7 +47,7 @@ public class UtilityService {
 
 
 
-    public Map<String, List<Map<String, String>> > serializeAndGroupFileContent(String fileName, String groupColumn) {
+    public static Map<String, List<Map<String, String>> > serializeAndGroupFileContent(String fileName, String groupColumn) {
 
         String fileExtension = getFileExtension(fileName);
 
@@ -70,7 +69,7 @@ public class UtilityService {
 
 
 
-    public Map<String, List<Map<String, String>> > groupDataByColumn(List<Map<String, String>> csvMaps, String groupColumn) {
+    public static Map<String, List<Map<String, String>> > groupDataByColumn(List<Map<String, String>> csvMaps, String groupColumn) {
 
         Map<String, List<Map<String, String>> > groupedMap = new LinkedHashMap<>();
 
@@ -105,7 +104,7 @@ public class UtilityService {
      ************************************************************************************************************/
 
     // SERIALIZER : CONVERT JSON URL TO JAVA MAPS
-    public List<Map<String, Object>> serializeJSONToMaps(String jsonFile) {
+    public static List<Map<String, Object>> serializeJSONToMaps(String jsonFile) {
 
         ObjectMapper mapper = new ObjectMapper();
 
@@ -132,7 +131,7 @@ public class UtilityService {
 
 
     // SERIALIZER : CONVERT JSON URL TO JAVA MAPS
-    public List<Map<String, Object>> serializeJSONToMaps(String jsonFile,String jsonKey) {
+    public static List<Map<String, Object>> serializeJSONToMaps(String jsonFile,String jsonKey) {
 
         ObjectMapper mapper = new ObjectMapper();
 
@@ -148,7 +147,7 @@ public class UtilityService {
 
 
     // PARSER : LOAD JSON NODES FROM  REMOTE JSON HTTP URL
-    public JsonNode readJsonURL(String apiLink) {
+    public static JsonNode readJsonURL(String apiLink) {
 
         JsonNode jsonNode = null;
         ObjectMapper mapper = new ObjectMapper();
@@ -181,7 +180,7 @@ public class UtilityService {
 
 
     // PARSER : LOAD JSON NODES FROM  LOCAL JSON
-    public JsonNode readJsonLocal(String jsonFileLink) {
+    public static JsonNode readJsonLocal(String jsonFileLink) {
 
         JsonNode jsonNode = null;
         ObjectMapper mapper = new ObjectMapper();
@@ -204,7 +203,7 @@ public class UtilityService {
      ************************************************************************************************************/
 
     // PARSER : CONVERT ANY FILE TO INPUTSTREAM
-    public FileInputStream convertFileToStream(String filePath){
+    public static FileInputStream convertFileToStream(String filePath){
 
         FileInputStream inputStream = null;
         try {
@@ -220,7 +219,7 @@ public class UtilityService {
 
 
     // PARSER : LOAD FILE CONTENT FROM HTTP URL
-    public String parseURL(String urlStr) {
+    public static String parseURL(String urlStr) {
 
         StringBuilder sb = new StringBuilder();
 
@@ -241,7 +240,7 @@ public class UtilityService {
 
 
     // LOAD FILE CONTENT FROM LOCAL DIRECTORY
-    public String parseFile(String path) {
+    public static String parseFile(String path) {
 
         StringBuilder sb = new StringBuilder();
 
@@ -260,7 +259,7 @@ public class UtilityService {
 
 
     // GET THE EXTENSION OF A FILE
-    public String getFileExtension(String fileName){
+    public static String getFileExtension(String fileName){
 
         String[] check = fileName.split("\\.");
         String fileExtension = check[check.length-1];
@@ -270,7 +269,7 @@ public class UtilityService {
 
 
     // FILE WRITE: WRITE STRING DATA TO FILE
-    public void writeToFile(String data, String destination, Boolean shouldAppend){
+    public static void writeToFile(String data, String destination, Boolean shouldAppend){
 
         // Write to the file using BufferedReader and FileWriter
         try {
@@ -284,7 +283,7 @@ public class UtilityService {
 
 
     // DELETE FILE FROM A LOCAL DIRECTORY
-    public Boolean deleteFile(String localDirectory) {
+    public static Boolean deleteFile(String localDirectory) {
 
         Boolean report = false;
         try {
@@ -300,7 +299,7 @@ public class UtilityService {
     }
 
 
-    public List<String> listAllFilesInADirectory(String directory) {
+    public static  List<String> listAllFilesInADirectory(String directory) {
 
         List<String> fileNames = new ArrayList<>();
         File folder = new File(directory);
@@ -409,7 +408,7 @@ public class UtilityService {
 
 
     public JsonNode jsonStringToNode(String jsonString){
-
+        ObjectMapper mapper = new ObjectMapper();
         JsonNode jsonNode = null;
 
         try {
