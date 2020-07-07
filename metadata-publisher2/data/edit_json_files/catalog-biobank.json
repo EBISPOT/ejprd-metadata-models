@@ -1,0 +1,6 @@
+{
+  "@context": "https://schema.org/docs/jsonldcontext.jsonld",
+   "catalog-biobank":{
+       "recruiting":"recruiting"
+      }
+   }

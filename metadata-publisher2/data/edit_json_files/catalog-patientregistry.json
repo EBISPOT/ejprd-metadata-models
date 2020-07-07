@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org/docs/jsonldcontext.jsonld",
+   "catalog-patientregistry":{
+      "patientregistry":{
+         "studyDesign":{
+               "inclusionexclusionCriteria":"inclusionexclusionCriteria",
+               "recruitmentArea":{
+                 "location":{
+                   "street": "street",
+                   "city": "city",
+                   "code": "code",
+                   "country": "country"
+                 }
+               }
+               },
+               "recruitmentStartDate":{
+                  "DateTime":{
+                     "day":"day",
+                     "month":"month",
+                     "year":"year",
+                     "time":"time"
+                  }
+               },
+               "recruitmentEndDate":{
+                  "DateTime":{
+                     "day":"day",
+                     "month":"month",
+                     "year":"year",
+                     "time":"time"
+                  }
+               },
+               "numberOfCases":"integer",
+               "dataSource":{
+                  "code":{
+                     "id":"ID",
+                     "url":"url",
+                     "label":"label",
+                     "description":"description"
+                  }
+               },
+               "privacyPolicy":"privacyPolicy",
+               "ethicalReviewCommitte":"ethicalReviewCommitte",
+               "availableForFutureCollaboration":"availableForFutureCollaboration",
+               "additionalProperties":{
+                  "PropertyValue":{
+                     "name":"name",
+                     "value":"value",
+                     "code":"code"
+                  }
+               }
+            }
+         }
+,
+         "hasBioBank":"boolean",
+         "inBioBank":{
+            "catalog-biobank":{
+                "recruiting":"recruiting"
+               }
+            }
+      }
+
+

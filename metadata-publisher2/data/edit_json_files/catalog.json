@@ -1,0 +1,26 @@
+{
+  "@context": "https://schema.org/docs/jsonldcontext.jsonld",
+  "catalog": {
+    "about": {
+      "code": {
+        "id": "ID",
+        "description": "description",
+        "label": "label",
+        "url": "url"
+      }
+    },
+    "alternative": "alternative",
+    "description": "description",
+    "homepage": "homepage",
+    "identifier": "identifier",
+    "location": {
+      "city": "city",
+      "code": "code",
+      "country": "country",
+      "street": "street"
+    },
+    "name": "name",
+    "sameAs": "same"
+
+  }
+}

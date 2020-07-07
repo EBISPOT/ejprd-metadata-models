@@ -1,0 +1,55 @@
+{
+  "@context": "https://schema.org/docs/jsonldcontext.jsonld",
+  "BiologicalSample": {
+    "Characteristics": {
+      "PropertyValue": {
+        "code": {
+          "code": {
+            "id": "ID",
+            "description": "description",
+            "label": "label",
+            "url": "url"
+          }
+        },
+        "name": "name",
+        "value": "value"
+      }
+    },
+    "description": "description",
+    "identifier": "identifier",
+    "inCatalog": {
+      "catalog": {
+        "about": {
+          "code": {
+            "id": "ID",
+            "description": "description",
+            "label": "label",
+            "url": "url"
+          }
+        },
+        "alternative": "alternative",
+        "description": "description",
+        "homepage": "homepage",
+        "identifier": "identifier",
+        "location": {
+          "organisation": {
+            "address": {
+              "location": {
+                "city": "city",
+                "code": "code",
+                "country": "country",
+                "street": "street"
+              }
+            },
+            "department": "department",
+            "facility": "facility",
+            "name": "name"
+          }
+        },
+        "name": "name",
+        "sameAs": "same47name"
+      }
+    },
+    "name": "name"
+  }
+}

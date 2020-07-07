@@ -1,0 +1,9 @@
+{
+  "@context": "https://schema.org/docs/jsonldcontext.jsonld",
+  "location":{
+    "street": "street",
+    "city": "city",
+    "code": "code",
+    "country": "country"
+  }
+}

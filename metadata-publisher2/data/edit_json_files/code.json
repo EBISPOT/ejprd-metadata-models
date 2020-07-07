@@ -1,0 +1,9 @@
+{
+   "@context": "https://schema.org/docs/jsonldcontext.jsonld",
+   "code":{
+      "id":"ID",
+      "url":"url",
+      "label":"label",
+      "description":"description"
+   }
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "Content-Location": "https://raw.githubusercontent.com/EBISPOT/ejprd-metadata-models/master/EJPRD/ejprd_metadata_model/metadata_publisher/resources/contexts/ejp_vocabulary_context.json",
+    "X-Classpath": "contexts/ejp_vocabulary_context.json",
+    "Content-Type": "application/ld+json"
+  }
+]
