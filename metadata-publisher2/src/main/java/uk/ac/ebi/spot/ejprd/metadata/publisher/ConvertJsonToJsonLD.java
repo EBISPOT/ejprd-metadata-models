@@ -1,16 +1,16 @@
 package uk.ac.ebi.spot.ejprd.metadata.publisher;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.jsonldjava.core.*;
-import com.github.jsonldjava.utils.JarCacheResource;
 import com.github.jsonldjava.utils.JsonUtils;
 import uk.ac.ebi.spot.ejprd.dto.Data;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Stream;
 
 
 public class ConvertJsonToJsonLD {
@@ -19,29 +19,58 @@ public class ConvertJsonToJsonLD {
     private static String fileDirectory = "/data/edit_json_files/";
     private static final DocumentLoader documentLoader = new DocumentLoader();
 
-    private static final String contextFileUrl = "ejp_vocabulary_context.json";
+    private static final String contextFileUrl = "/contexts/ejp_vocabulary_context.json";
 
-
-    private JarCacheResource loadContext() {
-        JarCacheResource jarCacheResource = null;
-        try {
-            Enumeration<URL> resourcesEnum = getClass().getClassLoader().getResources(contextFileUrl);
-
-            for (Iterator<String> i = resourcesEnum; i.hasNext();) {
-                String item = i.next();
-                System.out.println(item);
-            }
-            jarCacheResource =
-                    new JarCacheResource(getClass().getClassLoader().getResource(contextFileUrl));
+    private static Stream<URL> getResourceAsStream(String resource, Class clazz) {
+        ClassLoader classLoader = getContextClassLoader();
+        Stream<URL> urlStream = classLoader.resources(resource);
+        if (urlStream == null || urlStream.count() == 0) {
+            System.out.println(resource + " not found using ContextClassLoader.");
+            urlStream = Stream.of(clazz.getResource(resource));
         }
-        catch (IOException ioe) {
-            System.out.println(ioe.getStackTrace());
-        }
-        return jarCacheResource;
+
+        return urlStream;
     }
 
-    public List<Data> convertfile() throws IOException, JsonLdError {
 
+    public static ClassLoader getContextClassLoader() {
+        return Thread.currentThread().getContextClassLoader();
+    }
+
+    private static String loadResourceByUrl (URL u, String resource) throws IOException, ClassNotFoundException {
+        System.out.println("-> attempting input resource: "+resource);
+        String jsonString = null;
+        if (u != null) {
+            String path = u.getPath();
+            path = path.replaceFirst("^/(.:/)", "$1");
+            System.out.println("    absolute resource path found :\n    " + path);
+            jsonString = new String(Files.readAllBytes(Paths.get(path)));
+            System.out.println("    file content: "+ jsonString);
+        } else {
+            System.out.println("    no resource found: " + resource);
+        }
+        return jsonString;
+    }
+
+    private static Map<String, Object> loadContext(String contextFileUrl, Class clazz) {
+        Map<String, Object> context = null;
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            Stream<URL> urlStream = ConvertJsonToJsonLD.getResourceAsStream(contextFileUrl, clazz);
+            Optional<URL> absoluteResourceURLOptional = urlStream.findFirst();
+            String jsonString = loadResourceByUrl(absoluteResourceURLOptional.get(), contextFileUrl);
+            if (absoluteResourceURLOptional.isPresent()) {
+                context = objectMapper.readValue(jsonString, Map.class);
+            }
+
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
+        return context;
+    }
+
+    public static List<Data> convertfile() throws IOException, JsonLdError {
         List<String> filenames = UtilityService.listAllFilesInADirectory(userDirectory + fileDirectory);
 
         //List<Map<String, Object>> compactList = new ArrayList<>();
@@ -54,17 +83,10 @@ public class ConvertJsonToJsonLD {
 
             Object jsonObject = JsonUtils.fromInputStream(inputStream);
 
-            JarCacheResource jarCacheResource = loadContext();
-            ObjectInputStream ois = new ObjectInputStream(jarCacheResource.getInputStream());
-            Object object = null;
 
-            try {
-                object = ois.readObject();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
+            Map<String, Object> context = null;
+            context = loadContext(contextFileUrl, ConvertJsonToJsonLD.class);
 
-            Map<String, Object> context = (Map<String, Object>) object;
             System.setProperty("com.github.jsonldjava.disallowRemoteContextLoading", "true");
             System.setProperty(DocumentLoader.DISALLOW_REMOTE_CONTEXT_LOADING, "true");
 //                    .fromURL(new URL(CONTEXT));
@@ -107,6 +129,18 @@ public class ConvertJsonToJsonLD {
         }
         return dataList;
     }
+
+    public static void main(String args[]) {
+        try {
+
+//            ConvertJsonToJsonLD.loadContext(contextFileUrl, ConvertJsonToJsonLD.class);
+            ConvertJsonToJsonLD.convertfile();
+
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
+    }
+
 }
 
 
