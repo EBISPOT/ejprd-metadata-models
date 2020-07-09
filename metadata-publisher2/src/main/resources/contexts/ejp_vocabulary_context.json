@@ -1,62 +1,58 @@
 {
   "@context": {
-    "@base": "http://purl.org/ejp-rd/vocabulary/",
-    "ejp": "http://purl.org/ejp-rd/vocabulary/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "dct": "http://purl.org/dc/terms/",
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "dcat": "http://www.w3.org/ns/dcat#",
-    "vcard": "http://www.w3.org/ns/dcat#",
-    "foaf" : "http://xmlns.com/foaf/0.1/",
-    "umbel" : "http://umbel.org/umbel#",
-
-    "dataset": {
+    "Thing": {
       "@type": "@id",
-      "@id": "http://www.w3.org/ns/dcat#dataset"
+      "@id": "http://schema.org/Thing"
     },
-
-    "theme": {
-      "@id": "http://www.w3.org/ns/dcat#theme",
-      "@type": "@id"
-    },
-
-    "description": {
+    "Text": {
       "@type": "@id",
-      "@id":   "http://purl.org/dc/terms/description"
+      "@id": "http://schema.org/Text"
     },
-
-    "city": {
+    "State": {
       "@type": "@id",
-      "@id": "http://www.w3.org/ns/dcat#city"
+      "@id": "http://schema.org/State"
     },
 
-    "disease_code": {
-      "@id": "http://umbel.org/umbel#relatesToDisease",
-      "@type": "@id"
-    },
-
-    "themeTaxonomy": {
-      "@id": "http://www.w3.org/ns/dcat#themeTaxonomy",
-      "@type": "@id"
-    },
-
-    "location": "http://purl.org/dc/terms/spatial",
-    "publisher": "http://purl.org/dc/terms/publisher",
-    "type": {
-      "@id": "rdf:type",
-      "@type": "@id"
-    },
-
-    "country": {
+    "City": {
       "@type": "@id",
-      "@id": "http://www.w3.org/ns/dcat#country-name"
+      "@id": "http://schema.org/City"
     },
+
+    "WebPage": {
+      "@type": "@id",
+      "@id": "http://schema.org/WebPage"
+    },
+
+    "WebPageElement": {
+      "@type": "@id",
+      "@id": "http://schema.org/WebPageElement"
+    },
+  "Place": {
+      "@type": "@id",
+      "@id": "http://schema.org/Place"
+    },
+
+    "Country": {
+      "@type": "@id",
+      "@id": "http://schema.org/Country"
+    },
+    "PostalAddress": {
+      "@type": "@id",
+      "@id": "http://schema.org/PostalAddress"
+    },
+
     "Organization": {
       "@type": "@id",
       "@id": "http://schema.org/Organization"
+    },
+
+    "OrganizationRole": {
+      "@type": "@id",
+      "@id": "http://schema.org/OrganizationRole"
+    },
+    "Role": {
+      "@type": "@id",
+      "@id": "http://schema.org/Role"
     },
     "postalCode": {
       "@id": "http://schema.org/postalCode"
@@ -64,170 +60,179 @@
     "streetAddress": {
       "@id": "http://schema.org/streetAddress"
     },
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "label": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "place_postalAddress_feature": {
-      "@id": "http://memexproxy.com/ontology/place_postalAddress_feature"
-    },
-    "phonenumber_feature": {
-      "@id": "http://memexproxy.com/ontology/phonenumber_feature"
-    },
-    "emailaddress_feature": {
-      "@id": "http://memexproxy.com/ontology/emailaddress_feature"
+    "dateCreated": {
+      "@id": "http://schema.org/dateCreated"
     },
 
-    "organization": {
-      "@id": "http://memexproxy.com/ontology/organization",
-      "@type": "@id"
+    "street": {
+      "@id": "http://schema.org/street"
     },
-    "email": {
-      "@id": "http://schema.org/email",
+
+    "title": {
+      "@id": "http://schema.org/title"
+    },
+    "name": {
+      "@id": "http://schema.org/name",
       "@container":"@set"
     },
-
-    "place_zipcode": {
-      "@id": "http://memexproxy.com/ontology/place_zipcode"
+  "publisher": {
+      "@id": "http://schema.org/publisher"
     },
+    "startDate": {
+      "@id": "http://schema.org/startDate"
+    },
+  "startTime": {
+      "@id": "http://schema.org/startTime"
+    },
+
+        "dataset": {
+          "@type": "@id",
+          "@id": "http://www.w3.org/ns/dcat#dataset"
+        },
+
+        "theme": {
+          "@id": "http://www.w3.org/ns/dcat#theme",
+          "@type": "@id"
+        },
+
+        "description": {
+          "@type": "@id",
+          "@id":   "http://purl.org/dc/terms/description"
+        },
+
+        "city": {
+          "@type": "@id",
+          "@id": "http://www.w3.org/ns/dcat#city"
+        },
+
+        "disease_code": {
+          "@id": "http://umbel.org/umbel#relatesToDisease",
+          "@type": "@id"
+        },
+
+        "themeTaxonomy": {
+          "@id": "http://www.w3.org/ns/dcat#themeTaxonomy",
+          "@type": "@id"
+        },
+
+        "location": "http://purl.org/dc/terms/spatial",
+        "publisher": "http://purl.org/dc/terms/publisher",
+        "type": {
+          "@id": "rdf:type",
+          "@type": "@id"
+        },
+
+        "country": {
+          "@type": "@id",
+          "@id": "http://www.w3.org/ns/dcat#country-name"
+        },
+        "Organization": {
+          "@type": "@id",
+          "@id": "http://schema.org/Organization"
+        },
+        "postalCode": {
+          "@id": "http://schema.org/postalCode"
+        },
+        "streetAddress": {
+          "@id": "http://schema.org/streetAddress"
+        },
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "label": {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+          "email": {
+          "@id": "http://schema.org/email",
+          "@container":"@set"
+        },
+
       "contactPoint": {
-        "@id": "http://schema.org/contactPoint",
-        "@type": "@id"
-      },
-      "telephone": {
-        "@id": "http://schema.org/telephone",
-        "@container":"@set",
-        "@type": "@id"
-      },
+            "@id": "http://schema.org/contactPoint",
+            "@type": "@id"
+          },
+
+          "telephone": {
+            "@id": "http://schema.org/telephone",
+            "@container":"@set",
+            "@type": "@id"
+          },
 
 
+          "Identifier": {
+            "@id": "http://purl.org/dc/elements/1.1/identifier",
+            "@type": "@id"
+          },
 
-    "State": {
-      "@type": "@id",
-      "@id": "http://schema.org/State"
-    },
-    "WebPage": {
-      "@type": "@id",
-      "@id": "http://schema.org/WebPage"
-    },
-    "PhoneNumber": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/PhoneNumber"
-    },
-    "EmailAddress": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/EmailAddress"
-    },
-    "Place": {
-      "@type": "@id",
-      "@id": "http://schema.org/Place"
-    },
-    "PostalAddress": {
-      "@type": "@id",
-      "@id": "http://schema.org/PostalAddress"
-    },
-    "ImageObject": {
-      "@type": "@id",
-      "@id": "http://schema.org/ImageObject"
-    },
-    "PersonName": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/PersonName"
-    },
-    "Name": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/Name"
-    },
-    "Identifier": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/Identifier"
-    },
+          "alternateName": {
+            "@id": "http://purl.org/dc/terms/alternativeName",
+            "@type": "@id"
+          },
 
-   "Post": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/Post"
-    },
+          "about": {
+            "@id": "http://purl.org/ejp-rd/vocabulary/about",
+            "@type": "@id"
+          },
+          "name": {
+            "@id": "http://semanticscience.org/resource/SIO_000116",
+            "@type": "@id"
+          },
+          "description": {
+            "@id": "http://purl.org/dc/elements/1.1/description",
+            "@type": "@id"
+          },
 
-   "Role": {
-      "@type": "@id",
-      "@id": "http://schema.org/Role"
-    },
-   "a": "@type",
-    "hairColor": {
-      "@id": "http://memexproxy.com/ontology/hairColor",
-      "@container":"@set"
-    },
-    "makesOffer": {
-      "@id": "http://schema.org/makesOffer",
-      "@container":"@set",
-      "@type": "@id"
-    },
-    "owner": {
-      "@id": "http://memexproxy.com/ontology/owner",
-      "@container":"@set",
-      "@type": "@id"
-    },
+          "homepage": {
+            "@id": "http://xmlns.com/foaf/0.1/homepage",
+            "@type": "@id"
+          },
 
-    "isSimilarTo": {
-      "@id": "http://schema.org/isSimilarTo",
-      "@container":"@set"
-    },
-    "targetUrl": {
-      "@id": "http://schema.org/targetUrl"
-    },
+          "sameAs": {
+            "@id": "http://www.w3.org/2002/07/owl#sameAs",
+            "@type": "@id"
+          },
 
-    "worksFor": {
-      "@id": "http://schema.org/worksFor",
-      "@type": "@id"
-    },
-    "employee": {
-      "@id": "http://schema.org/employee",
-      "@type": "@id"
-    },
-   "hasBodyPart": {
-      "@id": "http://memexproxy.com/ontology/hasBodyPart",
-      "@type": "@id"
-    },
-    "hasImagePart": {
-      "@id": "http://memexproxy.com/ontology/hasImagePart",
-      "@type": "@id"
-    },
-    "hasTitlePart": {
-      "@id": "http://memexproxy.com/ontology/hasTitlePart",
-      "@type": "@id"
-    },
+          "city": {
+            "@id": "http://schema.org/city",
+            "@type": "@id"
+          },
 
-    "phonenumber": {
-      "@id": "http://memexproxy.com/ontology/phonenumber"
-    }
+          "code": {
+            "@id": "http://schema.org/code",
+            "@type": "@id"
+          },
+          "country": {
+            "@id": "http://schema.org/Country",
+            "@type": "@id"
+          },
+
+          "facility": {
+            "@id": "http://purl.obolibrary.org/obo/NCIT_C62574",
+            "@type": "@id"
+          },
+
+          "department": {
+            "@id": "http://purl.obolibrary.org/obo/OMIABIS_0000017",
+            "@type": "@id"
+          },
+
+
+          "day": {
+            "@id": "http://semanticscience.org/resource/SIO_000430",
+            "@type": "@id"
+          },
+
+          "month": {
+            "@id": "http://semanticscience.org/resource/SIO_000429",
+            "@type": "@id"
+          },
+
+          "year": {
+            "@id": "http://semanticscience.org/resource/SIO_000428",
+            "@type": "@id"
+          },
+          "time": {
+            "@id": "http://semanticscience.org/resource/SIO_000418",
+            "@type": "@id"
+          },
+
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

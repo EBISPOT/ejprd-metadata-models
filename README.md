@@ -6,6 +6,8 @@ This is for publishing [European Joint Programme (EJP) for Rare Disease](http://
 
 This diagram illustrates the basic idea of the metadata publication workflow. Components are independent and can be used and new blocks can be defined that inherit from parent blocks.
 
+For more details on the metadata see the [WIKI page](https://github.com/EBISPOT/ejprd-metadata-models/wiki/European-Joint-Programme-(EJP)-for-Rare-Disease-Virtual-Platform-Metadata-Model)
+
 # EJPRD namespace nomenclature
 * The scheme : https
 * The authority: https://www.ejprarediseases.org/
