@@ -59,8 +59,8 @@ public class ConvertJsonToJsonLD {
         try {
             Stream<URL> urlStream = ConvertJsonToJsonLD.getResourceAsStream(contextFileUrl, clazz);
             Optional<URL> absoluteResourceURLOptional = urlStream.findFirst();
-            String jsonString = loadResourceByUrl(absoluteResourceURLOptional.get(), contextFileUrl);
             if (absoluteResourceURLOptional.isPresent()) {
+                String jsonString = loadResourceByUrl(absoluteResourceURLOptional.get(), contextFileUrl);
                 context = objectMapper.readValue(jsonString, Map.class);
             }
 
