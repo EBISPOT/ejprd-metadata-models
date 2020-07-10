@@ -1,44 +1,72 @@
 {
   "@context": {
-    "@base": "http://purl.org/ejp-rd/vocabulary/",
+    "type": "@type",
+    "id": "@id",
+    "HTML": {
+      "@id": "rdf:HTML"
+    },
+    "@vocab": "http://purl.org/ejp-rd/vocabulary/",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "eli": "http://data.europa.eu/eli/ontology#",
     "ejp": "http://purl.org/ejp-rd/vocabulary/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "snomed": "http://purl.bioontology.org/ontology/SNOMEDCT/",
+    "bibo": "http://purl.org/ontology/bibo/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "owl": "http://www.w3.org/2002/07/owl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "void": "http://rdfs.org/ns/void#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dctype": "http://purl.org/dc/dcmitype/",
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "rdfa": "http://www.w3.org/ns/rdfa#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "dct": "http://purl.org/dc/terms/",
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "dcat": "http://www.w3.org/ns/dcat#",
-    "vcard": "http://www.w3.org/ns/dcat#",
-    "foaf" : "http://xmlns.com/foaf/0.1/",
-    "umbel" : "http://umbel.org/umbel#",
-    "id": "dc:identifier",
-    "name": "dct:title",
-    "city": "vcard:locality",
-    "country": "vcard:country-name",
-    "description": "dct:description",
-    "region" : "vcard:region",
+    "dcterms": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "id": {
+      "@id": "dc:identifier"
+    },
+    "name": {
+      "@id": "dc:title"
+    },
+    "city": {
+      "@id": "ejp:city"
+    },
+    "country": {
+      "@id": "ejp:country"
+    },
+    "description": {
+      "@id": "ejp:description"
+    },
     "datasets": {
-      "@id": "dcat:dataset",
-      "@type": "@id"
+      "@id": "dct:dataset"
     },
     "theme": {
-      "@id": "dcat:theme",
-      "@type": "@id"
+      "@id": "dcat:theme"
     },
     "disease_code": {
-      "@id": "umbel:relatesToDisease",
-      "@type": "@id"
+      "@id": "dcat:theme"
     },
     "themeTaxonomy": {
-      "@id": "dcat:themeTaxonomy",
-      "@type": "@id"
+      "@id": "dcat:themeTaxonomy"
     },
-    "location": "dct:spatial",
-    "publisher": "dct:publisher",
-    "type": {
-      "@id": "rdf:type",
-      "@type": "@id"
+    "location": {
+      "@id": "dct:spatial"
+    },
+    "publisher": {
+      "@id": "dct:publisher"
+    },
+    "street": {
+      "@id": "ejp:street"
+    },
+    "code": {
+      "@id": "code"
+    },
+    "uploadDate": {
+      "@id": "schema:uploadDate",
+      "@type": "Date"
     }
   }
 }
