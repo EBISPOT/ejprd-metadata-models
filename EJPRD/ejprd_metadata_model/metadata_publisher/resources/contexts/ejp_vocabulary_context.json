@@ -1,233 +1,71 @@
 {
   "@context": {
-    "@base": "http://purl.org/ejp-rd/vocabulary/",
+    "type": "@type",
+    "id": "@id",
+    "HTML": {
+      "@id": "rdf:HTML"
+    },
+    "@vocab": "http://purl.org/ejp-rd/vocabulary/",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "ejp": "http://purl.org/ejp-rd/vocabulary/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "snomed": "http://purl.bioontology.org/ontology/SNOMEDCT/",
+    "bibo": "http://purl.org/ontology/bibo/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "owl": "http://www.w3.org/2002/07/owl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "void": "http://rdfs.org/ns/void#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dctype": "http://purl.org/dc/dcmitype/",
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "rdfa": "http://www.w3.org/ns/rdfa#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "dct": "http://purl.org/dc/terms/",
-    "dc": "http://purl.org/dc/elements/1.1/",
-    "dcat": "http://www.w3.org/ns/dcat#",
-    "vcard": "http://www.w3.org/ns/dcat#",
-    "foaf" : "http://xmlns.com/foaf/0.1/",
-    "umbel" : "http://umbel.org/umbel#",
-
-    "dataset": {
-      "@type": "@id",
-      "@id": "http://www.w3.org/ns/dcat#dataset"
+    "dcterms": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "id": {
+      "@id": "dc:identifier"
     },
-
-    "theme": {
-      "@id": "http://www.w3.org/ns/dcat#theme",
-      "@type": "@id"
+    "name": {
+      "@id": "dc:title"
     },
-
-    "description": {
-      "@type": "@id",
-      "@id":   "http://purl.org/dc/terms/description"
-    },
-
     "city": {
-      "@type": "@id",
-      "@id": "http://www.w3.org/ns/dcat#locality"
+      "@id": "ejp:city"
     },
-
-    "disease_code": {
-      "@id": "http://umbel.org/umbel#relatesToDisease",
-      "@type": "@id"
-    },
-
-    "themeTaxonomy": {
-      "@id": "http://www.w3.org/ns/dcat#themeTaxonomy",
-      "@type": "@id"
-    },
-
-    "location": "http://purl.org/dc/terms/spatial",
-    "publisher": "http://purl.org/dc/terms/publisher",
-    "type": {
-      "@id": "rdf:type",
-      "@type": "@id"
-    },
-
     "country": {
-      "@type": "@id",
-      "@id": "http://www.w3.org/ns/dcat#country-name"
+      "@id": "ejp:country"
     },
-    "Organization": {
-      "@type": "@id",
-      "@id": "http://schema.org/Organization"
+    "description": {
+      "@id": "ejp:description"
     },
-    "postalCode": {
-      "@id": "http://schema.org/postalCode"
+    "datasets": {
+      "@id": "dct:dataset"
     },
-    "streetAddress": {
-      "@id": "http://schema.org/streetAddress"
+    "theme": {
+      "@id": "dcat:theme"
     },
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "label": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+    "disease_code": {
+      "@id": "dcat:theme"
     },
-    "place_postalAddress_feature": {
-      "@id": "http://memexproxy.com/ontology/place_postalAddress_feature"
+    "themeTaxonomy": {
+      "@id": "dcat:themeTaxonomy"
     },
-    "phonenumber_feature": {
-      "@id": "http://memexproxy.com/ontology/phonenumber_feature"
+    "location": {
+      "@id": "dct:spatial"
     },
-    "emailaddress_feature": {
-      "@id": "http://memexproxy.com/ontology/emailaddress_feature"
+    "publisher": {
+      "@id": "dct:publisher"
     },
-
-    "organization": {
-      "@id": "http://memexproxy.com/ontology/organization",
-      "@type": "@id"
+    "street": {
+      "@id": "ejp:street"
     },
-    "email": {
-      "@id": "http://schema.org/email",
-      "@container":"@set"
+    "code": {
+      "@id": "code"
     },
-
-    "place_zipcode": {
-      "@id": "http://memexproxy.com/ontology/place_zipcode"
-    },
-      "contactPoint": {
-        "@id": "http://schema.org/contactPoint",
-        "@type": "@id"
-      },
-      "telephone": {
-        "@id": "http://schema.org/telephone",
-        "@container":"@set",
-        "@type": "@id"
-      },
-
-
-
-    "State": {
-      "@type": "@id",
-      "@id": "http://schema.org/State"
-    },
-    "WebPage": {
-      "@type": "@id",
-      "@id": "http://schema.org/WebPage"
-    },
-    "PhoneNumber": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/PhoneNumber"
-    },
-    "EmailAddress": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/EmailAddress"
-    },
-    "Place": {
-      "@type": "@id",
-      "@id": "http://schema.org/Place"
-    },
-    "PostalAddress": {
-      "@type": "@id",
-      "@id": "http://schema.org/PostalAddress"
-    },
-    "ImageObject": {
-      "@type": "@id",
-      "@id": "http://schema.org/ImageObject"
-    },
-    "PersonName": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/PersonName"
-    },
-    "Name": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/Name"
-    },
-    "Identifier": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/Identifier"
-    },
-
-   "Post": {
-      "@type": "@id",
-      "@id": "http://memexproxy.com/ontology/Post"
-    },
-
-   "Role": {
-      "@type": "@id",
-      "@id": "http://schema.org/Role"
-    },
-   "a": "@type",
-    "hairColor": {
-      "@id": "http://memexproxy.com/ontology/hairColor",
-      "@container":"@set"
-    },
-    "makesOffer": {
-      "@id": "http://schema.org/makesOffer",
-      "@container":"@set",
-      "@type": "@id"
-    },
-    "owner": {
-      "@id": "http://memexproxy.com/ontology/owner",
-      "@container":"@set",
-      "@type": "@id"
-    },
-
-    "isSimilarTo": {
-      "@id": "http://schema.org/isSimilarTo",
-      "@container":"@set"
-    },
-    "targetUrl": {
-      "@id": "http://schema.org/targetUrl"
-    },
-
-    "worksFor": {
-      "@id": "http://schema.org/worksFor",
-      "@type": "@id"
-    },
-    "employee": {
-      "@id": "http://schema.org/employee",
-      "@type": "@id"
-    },
-   "hasBodyPart": {
-      "@id": "http://memexproxy.com/ontology/hasBodyPart",
-      "@type": "@id"
-    },
-    "hasImagePart": {
-      "@id": "http://memexproxy.com/ontology/hasImagePart",
-      "@type": "@id"
-    },
-    "hasTitlePart": {
-      "@id": "http://memexproxy.com/ontology/hasTitlePart",
-      "@type": "@id"
-    },
-
-    "phonenumber": {
-      "@id": "http://memexproxy.com/ontology/phonenumber"
+    "uploadDate": {
+      "@id": "schema:uploadDate",
+      "@type": "Date"
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
