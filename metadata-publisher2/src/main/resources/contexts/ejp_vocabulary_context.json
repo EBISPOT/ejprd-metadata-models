@@ -232,7 +232,7 @@
           "time": {
             "@id": "http://semanticscience.org/resource/SIO_000418",
             "@type": "@id"
-          },
+          }
 
   }
 }

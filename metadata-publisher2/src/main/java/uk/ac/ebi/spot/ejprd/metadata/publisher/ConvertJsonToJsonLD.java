@@ -133,7 +133,7 @@ public class ConvertJsonToJsonLD {
     public static void main(String args[]) {
         try {
 
-//            ConvertJsonToJsonLD.loadContext(contextFileUrl, ConvertJsonToJsonLD.class);
+           ConvertJsonToJsonLD.loadContext(contextFileUrl, ConvertJsonToJsonLD.class);
             ConvertJsonToJsonLD.convertfile();
 
         } catch (Throwable t) {
